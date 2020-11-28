@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="bao.xy.dao.JdbcUtilsMapper">
+
+    <update id="updt">
+        update ${table} set ${k}=#{v} where ( ${wherek}=#{wherev} )
+    </update>
+
+    <delete id="delIds">
+        DELETE FROM ${table} WHERE ${k} in (
+            <foreach collection="ids" item="id" separator=",">
+                #{id}
+            </foreach>
+        )
+    </delete>
+
+    <insert id="add">
+        insert INTO ${table} (${k})
+        VALUES (#{v})
+    </insert>
+
+    <update id="updtIds">
+        update ${table} set ${k} = #{v} WHERE id in (
+            <foreach collection="ids" item="id" separator=",">
+                #{id}
+            </foreach>
+        )
+    </update>
+
+    <select id="select" resultType="java.lang.Integer">
+        SELECT count(*) FROM ${table} <include refid="whereSql"></include>
+    </select>
+
+    <select id="selectStr" resultType="java.lang.String">
+        SELECT ${k} FROM ${table} <include refid="whereSql"></include>
+    </select>
+
+    <delete id="truncateTable">
+        truncate table ${table}
+    </delete>
+    
+    <sql id="whereSql">
+        <where>
+            <if test="k1 != null and k1 != '' and v1 != null and v1 != ''">
+                AND (${k1}) = (#{v1})
+            </if>
+            <if test="k2 != null and k2 != '' and v2 != null and v2 != ''">
+                AND (${k2}) = (#{v2})
+            </if>
+        </where>
+    </sql>
+
+</mapper>

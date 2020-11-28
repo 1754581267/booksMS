@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>员工管理</title>
+
+	<link href="./plugins/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/current.css" rel="stylesheet">
+	<style>
+		.lh>tbody>tr>td {
+			line-height: 33px;
+			padding-top: 0px;
+			padding-bottom: 0px;
+		}
+	</style>
+</head>
+<body>
+<div id="record">
+	<div class="panel panel-default">
+		<div class="panel-heading">阅读记录搜索界面</div>
+		<div class="panel-body">
+			<div class="form-inline">
+				<div class="form-group">
+					<div class="input-group">
+						<div class="input-group-addon">书名:</div>
+						<input type="text" class="form-control" placeholder="请输入书名" v-model="xPage.sd.name">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<div class="input-group-addon">作者:</div>
+						<input type="text" class="form-control" placeholder="请输入作者名" v-model="xPage.sd.author">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<div class="input-group-addon">排行:</div>
+						<select class="form-control" v-model="xPage.sd.date" id="sdDate">
+							<option value="">总排行榜</option>
+							<option :value="item.day" v-for="item in allday">{{item.text}}</option>
+						</select>
+					</div>
+				</div>
+				<button type="button" class="btn btn-primary" @click="xPage.getData(1)">
+					<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+					搜索
+				</button>
+			</div>
+		</div>
+		<div class="panel-heading">阅读记录操作界面</div>
+		<div class="panel-body">
+			<button type="button" class="btn btn-success" @click="xPage.getData(xPage.pageIndex)">
+				<span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+			</button>
+			<button type="button" class="btn btn-danger" @click="delmore()">
+				<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+				删除
+			</button>
+		</div>
+	</div>
+	<div id="show">
+		<table class="table table-hover table-bordered lh" >
+			<tr>
+				<th>
+					<input type="checkbox" v-model="allId" @change="all()"> 全选
+				</th>
+				<th>书名</th>
+				<th>作者</th>
+				<th>次数</th>
+				<th>操作</th>
+			</tr>
+			<tr v-for="(li, index) in xPage.dataList">
+				<td>
+					<input type="checkbox" :value="li.bookId" v-model="ids">
+					&nbsp;&nbsp;&nbsp;&nbsp;{{index + ((xPage.pageIndex - 1) * xPage.pageSize + 1)}}
+				</td>
+				<td>{{li.bookName}}</td>
+				<td>{{li.author}}</td>
+				<td>{{li.count}}</td>
+				<td>
+					<div class="btn-group  btn-group-xs" role="group">
+						<button type="button" class="btn btn-danger" @click="del(li.bookId)">
+							<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+							删除
+						</button>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<div class="myNav navbar-fixed-bottom">
+			<nav aria-label="Page navigation" class="text-center">
+				<ul class="pagination">
+					<li :class="{disabled: (xPage.pageIndex == 1)}" >
+						<a @click="xPage.upPage()" aria-label="Previous">
+							<span aria-hidden="true">&laquo;</span>
+						</a>
+					</li>
+					<li v-for="page in xPage.pageList" :class="{disabled: (xPage.pageIndex == page)}" >
+						<a @click="xPage.getData(page)" >{{page}}</a>
+					</li>
+					<li :class="{disabled: (xPage.pageIndex == xPage.pageMax)}" >
+						<a @click="xPage.nextPage()" aria-label="Next">
+							<span aria-hidden="true">&raquo;</span>
+						</a>
+					</li>
+					<li class="pager-label" style="line-height: 34px">
+						&nbsp;第 <input type="number" min="1" :max="xPage.pageMax" v-model="xPage.pageIndex" style="width: 43px; height: 25px;" onchange="xPage.getData(xPage.pageIndex)"> / {{xPage.pageMax}} 页
+						每页 <input type="number" min="1" max="10" v-model="xPage.pageSize" style="width: 43px; height: 25px;" onchange="xPage.getData(1)"> 条数据 共{{xPage.dataCount}}项
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<script src="./plugins/jq/jquery.min.js"></script>
+<script src="./plugins/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="./plugins/layer/layer.js"></script>
+<script src="./plugins/vue/vue.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/current.js"></script>
+<script src="js/records.js"></script>
+</body>
+</html>

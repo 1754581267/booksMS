@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="bao.xy.dao.StaffMapping">
+
+    <update id="updt">
+        update staff
+        set work=#{staff.work}, name=#{staff.name}, user_name=#{staff.userName}, gender=#{staff.gender}, age=#{staff.age}, phone=#{staff.phone}, state=#{staff.state}
+        where ( id = #{staff.id} )
+    </update>
+
+    <update id="state">
+        update staff set state = #{staff.state}
+        <foreach collection="ids" item="id" separator=",">
+            #{id}
+        </foreach>
+    </update>
+
+    <insert id="add" keyProperty="staff.id" useGeneratedKeys="true">
+        INSERT INTO staff (work, name, user_name, password, age, gender, phone, state)
+        VALUES (#{staff.work}, #{staff.name}, #{staff.userName}, #{staff.password}, #{staff.age}, #{staff.gender}, #{staff.phone}, #{staff.state})
+    </insert>
+
+    <select id="select" resultMap="StaffMap">
+        select id, work, name, user_name, age, gender, phone, state
+        from staff
+        <include refid="selectSql"></include>
+    </select>
+
+    <select id="listCount" resultType="java.lang.Integer">
+        select count(*) from staff <include refid="selectSql"></include>
+    </select>
+
+    <resultMap id="StaffMap" type="bao.xy.model.Staff">
+        <result column="user_name" property="userName"></result>
+    </resultMap>
+
+    <sql id="selectSql">
+        <where>
+            <if test="work != null and work != ''">
+                and work LIKE  CONCAT('%', #{work}, '%')
+            </if>
+            <if test="name != null and name != ''">
+                and name LIKE  CONCAT('%', #{name}, '%')
+            </if>
+            <if test="state != null and state != ''">
+                and state LIKE  CONCAT('%', #{state}, '%')
+            </if>
+        </where>
+    </sql>
+</mapper>

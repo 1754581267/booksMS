@@ -1,0 +1,31 @@
+2020-11-04 20:33:58.521 [main] DEBUG bao.xy.BooksMsApplication - Running with Spring Boot v2.2.11.RELEASE, Spring v5.2.10.RELEASE
+2020-11-04 20:34:25.551 [http-nio-8888-exec-6] DEBUG bao.xy.dao.LoginMapping.selet - ==>  Preparing: select * from user where user_name = ?
+2020-11-04 20:34:25.833 [http-nio-8888-exec-6] DEBUG bao.xy.dao.LoginMapping.selet - ==> Parameters: admin(String)
+2020-11-04 20:34:25.865 [http-nio-8888-exec-6] DEBUG bao.xy.dao.LoginMapping.selet - <==      Total: 1
+2020-11-04 20:36:05.820 [main] DEBUG bao.xy.BooksMsApplication - Running with Spring Boot v2.2.11.RELEASE, Spring v5.2.10.RELEASE
+2020-11-04 20:36:21.849 [http-nio-8888-exec-8] DEBUG bao.xy.dao.LoginMapping.selet - ==>  Preparing: select * from user where user_name = ?
+2020-11-04 20:36:22.158 [http-nio-8888-exec-8] DEBUG bao.xy.dao.LoginMapping.selet - ==> Parameters: admin(String)
+2020-11-04 20:36:22.188 [http-nio-8888-exec-8] DEBUG bao.xy.dao.LoginMapping.selet - <==      Total: 1
+2020-11-04 20:37:44.543 [main] DEBUG bao.xy.BooksMsApplication - Running with Spring Boot v2.2.11.RELEASE, Spring v5.2.10.RELEASE
+2020-11-04 20:38:18.423 [http-nio-8888-exec-4] DEBUG bao.xy.dao.LoginMapping.selet - ==>  Preparing: select * from user where user_name = ?
+2020-11-04 20:38:18.726 [http-nio-8888-exec-4] DEBUG bao.xy.dao.LoginMapping.selet - ==> Parameters: admin(String)
+2020-11-04 20:38:18.756 [http-nio-8888-exec-4] DEBUG bao.xy.dao.LoginMapping.selet - <==      Total: 1
+2020-11-04 20:39:10.794 [main] DEBUG bao.xy.BooksMsApplication - Running with Spring Boot v2.2.11.RELEASE, Spring v5.2.10.RELEASE
+2020-11-04 20:39:21.847 [http-nio-8888-exec-10] DEBUG bao.xy.dao.LoginMapping.selet - ==>  Preparing: select * from user where user_name = ?
+2020-11-04 20:39:22.160 [http-nio-8888-exec-10] DEBUG bao.xy.dao.LoginMapping.selet - ==> Parameters: admin(String)
+2020-11-04 20:39:22.189 [http-nio-8888-exec-10] DEBUG bao.xy.dao.LoginMapping.selet - <==      Total: 1
+2020-11-04 20:39:46.608 [http-nio-8888-exec-10] DEBUG bao.xy.dao.JdbcUtilsMapper.updt - ==>  Preparing: update user set password=? where ( id=? )
+2020-11-04 20:39:46.650 [http-nio-8888-exec-10] DEBUG bao.xy.dao.JdbcUtilsMapper.updt - ==> Parameters: 6789:;(String), 1(String)
+2020-11-04 20:39:46.794 [http-nio-8888-exec-10] DEBUG bao.xy.dao.JdbcUtilsMapper.updt - <==    Updates: 1
+2020-11-04 20:40:02.101 [http-nio-8888-exec-4] DEBUG bao.xy.dao.LoginMapping.selet - ==>  Preparing: select * from user where user_name = ?
+2020-11-04 20:40:02.102 [http-nio-8888-exec-4] DEBUG bao.xy.dao.LoginMapping.selet - ==> Parameters: admin(String)
+2020-11-04 20:40:02.105 [http-nio-8888-exec-4] DEBUG bao.xy.dao.LoginMapping.selet - <==      Total: 1
+2020-11-04 20:40:06.990 [http-nio-8888-exec-3] DEBUG bao.xy.dao.LoginMapping.selet - ==>  Preparing: select * from user where user_name = ?
+2020-11-04 20:40:06.990 [http-nio-8888-exec-3] DEBUG bao.xy.dao.LoginMapping.selet - ==> Parameters: admin(String)
+2020-11-04 20:40:06.992 [http-nio-8888-exec-3] DEBUG bao.xy.dao.LoginMapping.selet - <==      Total: 1
+2020-11-04 20:40:20.108 [http-nio-8888-exec-1] DEBUG bao.xy.dao.JdbcUtilsMapper.updt - ==>  Preparing: update user set password=? where ( id=? )
+2020-11-04 20:40:20.109 [http-nio-8888-exec-1] DEBUG bao.xy.dao.JdbcUtilsMapper.updt - ==> Parameters: firns(String), 1(String)
+2020-11-04 20:40:20.110 [http-nio-8888-exec-1] DEBUG bao.xy.dao.JdbcUtilsMapper.updt - <==    Updates: 1
+2020-11-04 20:40:28.212 [http-nio-8888-exec-8] DEBUG bao.xy.dao.LoginMapping.selet - ==>  Preparing: select * from user where user_name = ?
+2020-11-04 20:40:28.212 [http-nio-8888-exec-8] DEBUG bao.xy.dao.LoginMapping.selet - ==> Parameters: admin(String)
+2020-11-04 20:40:28.215 [http-nio-8888-exec-8] DEBUG bao.xy.dao.LoginMapping.selet - <==      Total: 1

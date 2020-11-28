@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="bao.xy.dao.ContentMapping">
+
+    <select id="content" resultMap="conMap">
+        select * from content where book_id = #{bookId}
+        ORDER BY serial
+    </select>
+
+    <select id="listCount" resultType="java.lang.Integer">
+        select count(*) from content where book_id = #{bookId}
+        ORDER BY serial
+    </select>
+
+    <resultMap id="conMap" type="bao.xy.model.Content">
+        <result column="book_id" property="bookId"></result>
+    </resultMap>
+
+
+</mapper>

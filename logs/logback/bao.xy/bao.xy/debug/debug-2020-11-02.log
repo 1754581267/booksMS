@@ -1,0 +1,61 @@
+2020-11-02 20:54:05.500 [main] DEBUG bao.xy.BooksMsApplication - Running with Spring Boot v2.2.11.RELEASE, Spring v5.2.10.RELEASE
+2020-11-02 20:54:42.710 [http-nio-8888-exec-7] DEBUG bao.xy.dao.LoginMapping.selet - ==>  Preparing: select * from user
+2020-11-02 20:54:42.923 [http-nio-8888-exec-7] DEBUG bao.xy.dao.LoginMapping.selet - ==> Parameters: 
+2020-11-02 20:54:42.964 [http-nio-8888-exec-7] DEBUG bao.xy.dao.LoginMapping.selet - <==      Total: 1
+2020-11-02 20:57:00.277 [main] DEBUG bao.xy.BooksMsApplication - Running with Spring Boot v2.2.11.RELEASE, Spring v5.2.10.RELEASE
+2020-11-02 20:57:49.561 [http-nio-8888-exec-1] DEBUG bao.xy.dao.LoginMapping.selet - ==>  Preparing: select * from user
+2020-11-02 20:57:49.774 [http-nio-8888-exec-1] DEBUG bao.xy.dao.LoginMapping.selet - ==> Parameters: 
+2020-11-02 20:57:49.803 [http-nio-8888-exec-1] DEBUG bao.xy.dao.LoginMapping.selet - <==      Total: 1
+2020-11-02 21:32:56.354 [main] DEBUG bao.xy.BooksMsApplication - Running with Spring Boot v2.2.11.RELEASE, Spring v5.2.10.RELEASE
+2020-11-02 21:33:06.264 [http-nio-8888-exec-1] DEBUG bao.xy.dao.LoginMapping.selet - ==>  Preparing: select * from user
+2020-11-02 21:33:06.582 [http-nio-8888-exec-1] DEBUG bao.xy.dao.LoginMapping.selet - ==> Parameters: 
+2020-11-02 21:33:06.619 [http-nio-8888-exec-1] DEBUG bao.xy.dao.LoginMapping.selet - <==      Total: 1
+2020-11-02 21:33:28.142 [http-nio-8888-exec-3] DEBUG bao.xy.dao.LoginMapping.selet - ==>  Preparing: select * from user
+2020-11-02 21:33:28.142 [http-nio-8888-exec-3] DEBUG bao.xy.dao.LoginMapping.selet - ==> Parameters: 
+2020-11-02 21:33:28.144 [http-nio-8888-exec-3] DEBUG bao.xy.dao.LoginMapping.selet - <==      Total: 1
+2020-11-02 21:33:53.316 [main] DEBUG bao.xy.BooksMsApplication - Running with Spring Boot v2.2.11.RELEASE, Spring v5.2.10.RELEASE
+2020-11-02 21:34:00.725 [http-nio-8888-exec-1] DEBUG bao.xy.dao.LoginMapping.selet - ==>  Preparing: select * from user
+2020-11-02 21:34:00.958 [http-nio-8888-exec-1] DEBUG bao.xy.dao.LoginMapping.selet - ==> Parameters: 
+2020-11-02 21:34:00.998 [http-nio-8888-exec-1] DEBUG bao.xy.dao.LoginMapping.selet - <==      Total: 1
+2020-11-02 21:42:33.283 [main] DEBUG bao.xy.BooksMsApplication - Running with Spring Boot v2.2.11.RELEASE, Spring v5.2.10.RELEASE
+2020-11-02 21:42:39.503 [http-nio-8888-exec-1] DEBUG bao.xy.dao.LoginMapping.selet - ==>  Preparing: select * from user
+2020-11-02 21:42:39.687 [http-nio-8888-exec-1] DEBUG bao.xy.dao.LoginMapping.selet - ==> Parameters: 
+2020-11-02 21:42:39.717 [http-nio-8888-exec-1] DEBUG bao.xy.dao.LoginMapping.selet - <==      Total: 1
+2020-11-02 21:43:13.570 [main] DEBUG bao.xy.BooksMsApplication - Running with Spring Boot v2.2.11.RELEASE, Spring v5.2.10.RELEASE
+2020-11-02 21:43:31.062 [http-nio-8888-exec-1] DEBUG bao.xy.dao.LoginMapping.selet - ==>  Preparing: select * from user
+2020-11-02 21:43:31.237 [http-nio-8888-exec-1] DEBUG bao.xy.dao.LoginMapping.selet - ==> Parameters: 
+2020-11-02 21:43:31.268 [http-nio-8888-exec-1] DEBUG bao.xy.dao.LoginMapping.selet - <==      Total: 1
+2020-11-02 21:43:52.815 [main] DEBUG bao.xy.BooksMsApplication - Running with Spring Boot v2.2.11.RELEASE, Spring v5.2.10.RELEASE
+2020-11-02 21:43:59.290 [http-nio-8888-exec-1] DEBUG bao.xy.dao.LoginMapping.selet - ==>  Preparing: select * from user
+2020-11-02 21:43:59.472 [http-nio-8888-exec-1] DEBUG bao.xy.dao.LoginMapping.selet - ==> Parameters: 
+2020-11-02 21:43:59.502 [http-nio-8888-exec-1] DEBUG bao.xy.dao.LoginMapping.selet - <==      Total: 1
+2020-11-02 21:44:42.028 [main] DEBUG bao.xy.BooksMsApplication - Running with Spring Boot v2.2.11.RELEASE, Spring v5.2.10.RELEASE
+2020-11-02 21:44:55.930 [http-nio-8888-exec-1] DEBUG bao.xy.dao.LoginMapping.selet - ==>  Preparing: select * from user
+2020-11-02 21:44:56.160 [http-nio-8888-exec-1] DEBUG bao.xy.dao.LoginMapping.selet - ==> Parameters: 
+2020-11-02 21:44:56.196 [http-nio-8888-exec-1] DEBUG bao.xy.dao.LoginMapping.selet - <==      Total: 1
+2020-11-02 21:47:45.263 [main] DEBUG bao.xy.BooksMsApplication - Running with Spring Boot v2.2.11.RELEASE, Spring v5.2.10.RELEASE
+2020-11-02 21:47:51.718 [http-nio-8888-exec-1] DEBUG bao.xy.dao.LoginMapping.selet - ==>  Preparing: select * from user
+2020-11-02 21:47:51.898 [http-nio-8888-exec-1] DEBUG bao.xy.dao.LoginMapping.selet - ==> Parameters: 
+2020-11-02 21:47:51.929 [http-nio-8888-exec-1] DEBUG bao.xy.dao.LoginMapping.selet - <==      Total: 1
+2020-11-02 22:15:56.391 [main] DEBUG bao.xy.BooksMsApplication - Running with Spring Boot v2.2.11.RELEASE, Spring v5.2.10.RELEASE
+2020-11-02 22:16:04.373 [http-nio-8888-exec-1] DEBUG bao.xy.dao.LoginMapping.selet - ==>  Preparing: select * from user where user_name = ?
+2020-11-02 22:16:04.634 [http-nio-8888-exec-1] DEBUG bao.xy.dao.LoginMapping.selet - ==> Parameters: null
+2020-11-02 22:16:04.663 [http-nio-8888-exec-1] DEBUG bao.xy.dao.LoginMapping.selet - <==      Total: 0
+2020-11-02 22:16:25.664 [http-nio-8888-exec-3] DEBUG bao.xy.dao.LoginMapping.selet - ==>  Preparing: select * from user where user_name = ?
+2020-11-02 22:16:25.665 [http-nio-8888-exec-3] DEBUG bao.xy.dao.LoginMapping.selet - ==> Parameters: null
+2020-11-02 22:16:25.666 [http-nio-8888-exec-3] DEBUG bao.xy.dao.LoginMapping.selet - <==      Total: 0
+2020-11-02 22:17:43.332 [main] DEBUG bao.xy.BooksMsApplication - Running with Spring Boot v2.2.11.RELEASE, Spring v5.2.10.RELEASE
+2020-11-02 22:18:05.060 [main] DEBUG bao.xy.BooksMsApplication - Running with Spring Boot v2.2.11.RELEASE, Spring v5.2.10.RELEASE
+2020-11-02 22:20:39.075 [main] DEBUG bao.xy.BooksMsApplication - Running with Spring Boot v2.2.11.RELEASE, Spring v5.2.10.RELEASE
+2020-11-02 22:21:30.693 [main] DEBUG bao.xy.BooksMsApplication - Running with Spring Boot v2.2.11.RELEASE, Spring v5.2.10.RELEASE
+2020-11-02 22:23:31.061 [main] DEBUG bao.xy.BooksMsApplication - Running with Spring Boot v2.2.11.RELEASE, Spring v5.2.10.RELEASE
+2020-11-02 22:23:53.761 [http-nio-8888-exec-2] DEBUG bao.xy.dao.LoginMapping.selet - ==>  Preparing: select * from user
+2020-11-02 22:23:54.044 [http-nio-8888-exec-2] DEBUG bao.xy.dao.LoginMapping.selet - ==> Parameters: 
+2020-11-02 22:23:54.091 [http-nio-8888-exec-2] DEBUG bao.xy.dao.LoginMapping.selet - <==      Total: 1
+2020-11-02 22:24:47.720 [main] DEBUG bao.xy.BooksMsApplication - Running with Spring Boot v2.2.11.RELEASE, Spring v5.2.10.RELEASE
+2020-11-02 22:25:07.991 [http-nio-8888-exec-1] DEBUG bao.xy.dao.LoginMapping.selet - ==>  Preparing: select * from user where user_name = ?
+2020-11-02 22:25:08.224 [http-nio-8888-exec-1] DEBUG bao.xy.dao.LoginMapping.selet - ==> Parameters: admin(String)
+2020-11-02 22:25:08.256 [http-nio-8888-exec-1] DEBUG bao.xy.dao.LoginMapping.selet - <==      Total: 1
+2020-11-02 22:25:14.270 [http-nio-8888-exec-2] DEBUG bao.xy.dao.LoginMapping.selet - ==>  Preparing: select * from user where user_name = ?
+2020-11-02 22:25:14.270 [http-nio-8888-exec-2] DEBUG bao.xy.dao.LoginMapping.selet - ==> Parameters: 1(String)
+2020-11-02 22:25:14.271 [http-nio-8888-exec-2] DEBUG bao.xy.dao.LoginMapping.selet - <==      Total: 0

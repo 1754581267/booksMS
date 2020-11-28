@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>电子书管理</title>
+
+    <link href="./plugins/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/current.css" rel="stylesheet">
+    <style>
+        .lh>tbody>tr>td {
+            line-height: 33px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+		#data > td {
+			line-height: 68px;
+		}
+    </style>
+</head>
+<body>
+<div id="book">
+    <div class="panel panel-default">
+        <div class="panel-heading">电子书信息搜索界面</div>
+        <div class="panel-body">
+            <div class="form-inline">
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-addon">类别:</div>
+                        <input type="text" class="form-control" placeholder="请输入类别" v-model="xPage.sd.genre">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-addon">书名:</div>
+                        <input type="text" class="form-control" placeholder="请输入书名" v-model="xPage.sd.name">
+                    </div>
+                </div>
+				<div class="form-group">
+				    <div class="input-group">
+				        <div class="input-group-addon">作者:</div>
+				        <input type="text" class="form-control" placeholder="请输入作者" v-model="xPage.sd.author">
+				    </div>
+				</div>
+                <button type="button" class="btn btn-primary" @click="xPage.getData(1)">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    搜索
+                </button>
+            </div>
+        </div>
+        <div class="panel-heading">电子书信息操作界面</div>
+        <div class="panel-body">
+            <button type="button" class="btn btn-success" @click="xPage.getData(xPage.pageIndex)">
+                <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+            </button>
+            <button type="button" class="btn btn-success" @click="addMod">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                添加
+            </button>
+            <button type="button" class="btn btn-danger" @click="xPage.delmore()">
+                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                删除
+            </button>
+        </div>
+    </div>
+    <div id="show">
+        <table class="table table-hover table-bordered lh" >
+            <tr>
+                <th>
+                    <input type="checkbox" v-model="xPage.allId" @change="xPage.all()"> 全选
+                </th>
+                <th>类别</th>
+                <th>封面</th>
+                <th>书名</th>
+                <th>作者</th>
+                <th>介绍</th>
+                <th>字数</th>
+                <th>更新时间</th>
+                <th>操作</th>
+            </tr>
+            <tr v-for="(li, index) in xPage.dataList" id="data">
+                <td style="width: 5%;">
+					<input type="checkbox" :value="li.id" v-model="xPage.ids">
+					&nbsp;&nbsp;&nbsp;&nbsp;{{index + ((xPage.pageIndex - 1) * xPage.pageSize + 1)}}
+                </td>
+                <td style="width: 5%;">{{li.genre}}</td>
+                <td style="width: 5%;"><img :src="'/img?img=' + li.img" style="width: 40px;height: 67px;"></td>
+                <td style="width: 8%;" :title="li.name">{{li.name}}</td>
+                <td style="width: 8%;" :title="li.author">{{li.author}}</td>
+                <td style="max-width:100px;width: 40%; white-space:nowrap;overflow:hidden;text-overflow: ellipsis;" :title="li.note">
+					{{li.note}}
+				</td>
+                <td style="width: 6%;">{{li.size}}</td>
+                <td style="width: 7%;min-width: 73px;">{{li.date}}</td>
+                <td style="width: 16%;">
+                    <div class="btn-group  btn-group-xs" role="group">
+						<button type="button" class="btn btn-primary btn-lg btn-default" @click="getCont(li)">
+						    编辑章节
+						</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-danger" @click="xPage.del(li.id)">
+                            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                            删除
+                        </button>
+                        <button type="button" class="btn btn-primary btn-lg btn-warning" @click="updt(li)">
+                            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                            修改
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="myNav navbar-fixed-bottom">
+            <nav aria-label="Page navigation" class="text-center">
+                <ul class="pagination">
+                    <li :class="{disabled: (xPage.pageIndex == 1)}" >
+                        <a @click="xPage.upPage()" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li v-for="page in xPage.pageList" :class="{disabled: (xPage.pageIndex == page)}" >
+                        <a @click="xPage.getData(page)" >{{page}}</a>
+                    </li>
+                    <li :class="{disabled: (xPage.pageIndex == xPage.pageMax)}" >
+                        <a @click="xPage.nextPage()" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                    <li class="pager-label" style="line-height: 34px">
+                        &nbsp;第 <input type="number" min="1" :max="xPage.pageMax" v-model="xPage.pageIndex" style="width: 43px; height: 25px;" onchange="xPage.getData(xPage.pageIndex)"> / {{xPage.pageMax}} 页
+                        每页 <input type="number" min="1" max="10" v-model="xPage.pageSize" style="width: 43px; height: 25px;" onchange="xPage.getData(1)"> 条数据 共{{xPage.dataCount}}项
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+	<!-- 添加书籍章节信息 -->
+	<div class="modal" id="addCont" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+		<div class="modal-dialog" style="width: 500px;">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h4 class="modal-title">{{book}}</h4>
+				</div>
+				<div class="modal-body">
+					<form class="form-horizontal" id="contform" @submit.prevent="submit1()" method="post" >
+						<div class="form-group">
+							<label for="chapter" class="col-sm-3 control-label">章节:</label>
+							<div class="col-sm-8">
+								<select class="form-control" v-model="chap" id="chapter" @change="chapter()">
+									<option value="" >未选择</option>
+									<option :value="li" v-for="li in content">第 {{li.serial}} 章</option>
+								</select>
+								<div id="inputChap"></div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="title" class="col-sm-3 control-label">标题:</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" v-model="title" id="title" placeholder="请输入章节标题">
+								<div id="inputTitle"></div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="cont" class="col-sm-3 control-label">内容:</label>
+							<div class="col-sm-8">
+								<textarea class="form-control" rows="10" placeholder="请输入文章内容" v-model="cont" id="cont"></textarea>
+								<div id="inputCont"></div>
+							</div>
+						</div>
+						<div class="modal-footer text-center" style="margin: auto; width: 150px;">
+							<button type="submit" class="btn btn-primary">保存</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+    <!-- 添加/修改电子书模态框 -->
+	<div class="modal" id="addBook" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+		<div class="modal-dialog" style="width: 500px;">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h4 class="modal-title">{{mt}}书籍信息</h4>
+				</div>
+				<div class="modal-body">
+					<form class="form-horizontal" id="addform" @submit.prevent="submit()" method="post" >
+						<div class="form-group">
+							<label for="genre" class="col-sm-3 control-label">类别:</label>
+							<div class="col-sm-8">
+								<select class="form-control" v-model="genres" id="genre">
+									<option value="">未选择</option>
+									<option :value="genre" v-for="genre in allgenre">{{genre}}</option>
+								</select>
+								<div id="inputGenre"></div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="bookImg" class="col-sm-3 control-label">封面:</label>
+							<div class="col-sm-8">
+								<input type="file" id="bookImg">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="name" class="col-sm-3 control-label">书名:</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control"  @blur="exist(name)" v-model="name" id="name" placeholder="请输入书名">
+								<div id="inputName"></div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="author" class="col-sm-3 control-label">作者:</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" v-model="author" id="author" placeholder="请输入用户名">
+								<div id="inputAuthor"></div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="note" class="col-sm-3 control-label">简介:</label>
+							<div class="col-sm-8">
+								<textarea class="form-control" rows="3" v-model="note" id="note"></textarea>
+								<div id="inputNote"></div>
+							</div>
+						</div>
+						<div class="modal-footer text-center" style="margin: auto; width: 150px;">
+							<button type="submit" class="btn btn-primary">保存</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="./plugins/jq/jquery.min.js"></script>
+<script src="./plugins/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="./plugins/layer/layer.js"></script>
+<script src="./plugins/vue/vue.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/current.js"></script>
+<script src="js/books.js"></script>
+</body>
+</html>

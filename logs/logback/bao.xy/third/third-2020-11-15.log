@@ -1,0 +1,553 @@
+2020-11-15 09:49:25.756 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.21.Final
+2020-11-15 09:49:29.565 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2020-11-15 09:49:29.591 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2020-11-15 09:49:29.592 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-15 09:49:29.592 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-15 09:49:29.923 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-15 09:49:29.924 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3940 ms
+2020-11-15 09:49:30.197 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2020-11-15 09:49:31.067 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-11-15 09:49:32.582 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-15 09:49:32.727 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-11-15 09:49:33.025 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2020-11-15 09:49:33.067 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2020-11-15 09:49:43.619 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-15 09:49:43.620 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-11-15 09:49:43.684 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 64 ms
+2020-11-15 09:51:52.255 [http-nio-8888-exec-1] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 127638
+2020-11-15 09:51:52.257 [http-nio-8888-exec-1] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 141215
+2020-11-15 09:54:25.742 [http-nio-8888-exec-1] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 153454
+2020-11-15 09:57:51.106 [http-nio-8888-exec-3] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 94267
+2020-11-15 10:03:24.549 [http-nio-8888-exec-8] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 61264
+2020-11-15 10:09:10.648 [http-nio-8888-exec-8] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 274652
+2020-11-15 10:11:57.768 [http-nio-8888-exec-2] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 85006
+2020-11-15 10:14:37.180 [http-nio-8888-exec-3] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 138820
+2020-11-15 10:15:41.218 [http-nio-8888-exec-3] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 64031
+2020-11-15 10:19:10.390 [http-nio-8888-exec-2] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 135761
+2020-11-15 10:23:39.203 [http-nio-8888-exec-6] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 265235
+2020-11-15 10:25:14.499 [http-nio-8888-exec-6] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 95281
+2020-11-15 10:26:14.644 [http-nio-8888-exec-6] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 60139
+2020-11-15 10:31:27.291 [http-nio-8888-exec-3] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 188201
+2020-11-15 10:31:27.293 [http-nio-8888-exec-3] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 290247
+2020-11-15 10:32:59.710 [http-nio-8888-exec-3] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 92409
+2020-11-15 10:44:29.814 [http-nio-8888-exec-10] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 503786
+2020-11-15 10:44:29.816 [http-nio-8888-exec-10] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 649780
+2020-11-15 10:46:16.705 [http-nio-8888-exec-10] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 106878
+2020-11-15 10:48:21.859 [http-nio-8888-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 64905
+2020-11-15 10:49:49.138 [http-nio-8888-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 61112
+2020-11-15 10:52:21.088 [http-nio-8888-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 151943
+2020-11-15 10:53:55.794 [http-nio-8888-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 94700
+2020-11-15 11:34:35.151 [http-nio-8888-exec-6] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 2339543
+2020-11-15 11:42:02.680 [http-nio-8888-exec-4] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 365135
+2020-11-15 13:14:59.291 [http-nio-8888-exec-10] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 5576597
+2020-11-15 13:15:47.208 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.21.Final
+2020-11-15 13:15:49.964 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2020-11-15 13:15:49.975 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2020-11-15 13:15:49.976 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-15 13:15:49.977 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-15 13:15:50.404 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-15 13:15:50.404 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2978 ms
+2020-11-15 13:15:50.649 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2020-11-15 13:15:51.555 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-11-15 13:15:52.809 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-15 13:15:52.947 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-11-15 13:15:53.198 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2020-11-15 13:15:53.233 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2020-11-15 13:15:53.322 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-15 13:15:53.323 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-11-15 13:15:53.332 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 9 ms
+2020-11-15 13:23:25.587 [http-nio-8888-exec-9] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.binding.BindingException: Parameter 'date' not found. Available parameters are [author, genre, name, id, param3, param4, param1, param2]] with root cause
+org.apache.ibatis.binding.BindingException: Parameter 'date' not found. Available parameters are [author, genre, name, id, param3, param4, param1, param2]
+	at org.apache.ibatis.binding.MapperMethod$ParamMap.get(MapperMethod.java:212)
+	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextAccessor.getProperty(DynamicContext.java:120)
+	at org.apache.ibatis.ognl.OgnlRuntime.getProperty(OgnlRuntime.java:3338)
+	at org.apache.ibatis.ognl.ASTProperty.getValueBody(ASTProperty.java:121)
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:212)
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:258)
+	at org.apache.ibatis.ognl.ASTNotEq.getValueBody(ASTNotEq.java:50)
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:212)
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:258)
+	at org.apache.ibatis.ognl.ASTAnd.getValueBody(ASTAnd.java:61)
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:212)
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:258)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:560)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:524)
+	at org.apache.ibatis.scripting.xmltags.OgnlCache.getValue(OgnlCache.java:46)
+	at org.apache.ibatis.scripting.xmltags.ExpressionEvaluator.evaluateBoolean(ExpressionEvaluator.java:32)
+	at org.apache.ibatis.scripting.xmltags.IfSqlNode.apply(IfSqlNode.java:34)
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.lambda$apply$0(MixedSqlNode.java:32)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:32)
+	at org.apache.ibatis.scripting.xmltags.TrimSqlNode.apply(TrimSqlNode.java:55)
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.lambda$apply$0(MixedSqlNode.java:32)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:32)
+	at org.apache.ibatis.scripting.xmltags.DynamicSqlSource.getBoundSql(DynamicSqlSource.java:39)
+	at org.apache.ibatis.mapping.MappedStatement.getBoundSql(MappedStatement.java:305)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:87)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at com.sun.proxy.$Proxy58.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy69.selBook(Unknown Source)
+	at bao.xy.service.impl.WechatServiceImpl.recBook(WechatServiceImpl.java:107)
+	at bao.xy.service.impl.WechatServiceImpl$$FastClassBySpringCGLIB$$d63a0889.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:687)
+	at bao.xy.service.impl.WechatServiceImpl$$EnhancerBySpringCGLIB$$9b01fbb2.recBook(<generated>)
+	at bao.xy.controller.WechatController.book(WechatController.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-15 13:25:35.435 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.21.Final
+2020-11-15 13:25:38.416 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2020-11-15 13:25:38.429 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2020-11-15 13:25:38.430 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-15 13:25:38.430 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-15 13:25:38.519 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-15 13:25:38.519 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2933 ms
+2020-11-15 13:25:38.811 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2020-11-15 13:25:39.235 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-11-15 13:25:39.971 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-15 13:25:40.048 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-11-15 13:25:40.201 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2020-11-15 13:25:40.225 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2020-11-15 13:25:49.684 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-15 13:25:49.684 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-11-15 13:25:49.699 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 15 ms
+2020-11-15 13:26:47.723 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.21.Final
+2020-11-15 13:26:50.477 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2020-11-15 13:26:50.486 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2020-11-15 13:26:50.487 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-15 13:26:50.487 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-15 13:26:50.613 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-15 13:26:50.614 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2723 ms
+2020-11-15 13:26:50.773 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2020-11-15 13:26:51.252 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-11-15 13:26:51.996 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-15 13:26:52.073 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-11-15 13:26:52.284 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2020-11-15 13:26:52.317 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2020-11-15 13:26:59.755 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-15 13:26:59.755 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-11-15 13:26:59.768 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 13 ms
+2020-11-15 13:27:47.506 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.21.Final
+2020-11-15 13:27:49.960 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2020-11-15 13:27:49.984 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2020-11-15 13:27:49.985 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-15 13:27:49.985 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-15 13:27:50.129 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-15 13:27:50.129 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2439 ms
+2020-11-15 13:27:50.271 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2020-11-15 13:27:50.785 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-11-15 13:27:51.624 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-15 13:27:51.705 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-11-15 13:27:51.860 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2020-11-15 13:27:51.885 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2020-11-15 13:28:03.944 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-15 13:28:03.951 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-11-15 13:28:03.963 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+2020-11-15 13:28:29.169 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.21.Final
+2020-11-15 13:28:31.255 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2020-11-15 13:28:31.263 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2020-11-15 13:28:31.264 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-15 13:28:31.264 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-15 13:28:31.345 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-15 13:28:31.346 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2117 ms
+2020-11-15 13:28:31.469 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2020-11-15 13:28:31.850 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-11-15 13:28:32.469 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-15 13:28:32.550 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-11-15 13:28:32.686 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2020-11-15 13:28:32.710 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2020-11-15 13:28:53.803 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-15 13:28:53.804 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-11-15 13:28:53.821 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 17 ms
+2020-11-15 13:41:54.153 [http-nio-8888-exec-1] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 779361
+2020-11-15 13:41:54.155 [http-nio-8888-exec-1] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 802320
+2020-11-15 13:53:00.620 [http-nio-8888-exec-2] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 666457
+2020-11-15 13:55:06.745 [http-nio-8888-exec-4] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 90985
+2020-11-15 13:56:20.416 [http-nio-8888-exec-4] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 73661
+2020-11-15 14:00:23.687 [http-nio-8888-exec-3] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 240500
+2020-11-15 14:02:18.128 [http-nio-8888-exec-9] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 112612
+2020-11-15 14:06:50.922 [http-nio-8888-exec-4] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 154058
+2020-11-15 14:15:10.621 [http-nio-8888-exec-9] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 342048
+2020-11-15 14:20:56.160 [http-nio-8888-exec-6] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 224772
+2020-11-15 14:27:34.871 [http-nio-8888-exec-2] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 351733
+2020-11-15 14:30:14.781 [http-nio-8888-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 66245
+2020-11-15 14:37:26.912 [http-nio-8888-exec-7] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 432125
+2020-11-15 14:55:25.032 [http-nio-8888-exec-1] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 1003117
+2020-11-15 14:56:50.533 [http-nio-8888-exec-1] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 85490
+2020-11-15 15:01:46.257 [http-nio-8888-exec-4] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 261342
+2020-11-15 15:02:49.789 [http-nio-8888-exec-2] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 61174
+2020-11-15 15:05:45.593 [http-nio-8888-exec-4] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 111568
+2020-11-15 15:09:46.795 [http-nio-8888-exec-1] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 65715
+2020-11-15 15:18:06.186 [http-nio-8888-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 478824
+2020-11-15 15:24:08.439 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.21.Final
+2020-11-15 15:24:11.256 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2020-11-15 15:24:11.273 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2020-11-15 15:24:11.275 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-15 15:24:11.275 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-15 15:24:11.419 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-15 15:24:11.419 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2663 ms
+2020-11-15 15:24:11.544 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2020-11-15 15:24:12.343 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-11-15 15:24:13.397 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-15 15:24:13.508 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-11-15 15:24:13.678 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2020-11-15 15:24:13.713 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2020-11-15 15:25:43.129 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-15 15:25:43.129 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-11-15 15:25:43.146 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 17 ms
+2020-11-15 15:25:43.547 [http-nio-8888-exec-1] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 91183
+2020-11-15 15:25:43.548 [http-nio-8888-exec-1] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 91220
+2020-11-15 15:35:31.785 [http-nio-8888-exec-9] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 585077
+2020-11-15 15:42:20.043 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.21.Final
+2020-11-15 15:42:22.827 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2020-11-15 15:42:22.842 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2020-11-15 15:42:22.843 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-15 15:42:22.843 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-15 15:42:23.012 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-15 15:42:23.012 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2837 ms
+2020-11-15 15:42:23.237 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2020-11-15 15:42:24.038 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-11-15 15:42:24.729 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-15 15:42:24.795 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-11-15 15:42:24.977 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2020-11-15 15:42:25.030 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2020-11-15 15:42:41.933 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-15 15:42:41.933 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-11-15 15:42:41.976 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 41 ms
+2020-11-15 15:54:14.186 [http-nio-8888-exec-10] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 594439
+2020-11-15 15:54:14.189 [http-nio-8888-exec-10] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 710166
+2020-11-15 16:02:33.558 [http-nio-8888-exec-8] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 453579
+2020-11-15 16:04:41.418 [http-nio-8888-exec-9] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 124734
+2020-11-15 16:16:25.706 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.21.Final
+2020-11-15 16:16:27.915 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2020-11-15 16:16:27.925 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2020-11-15 16:16:27.926 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-15 16:16:27.927 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-15 16:16:28.007 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-15 16:16:28.007 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2175 ms
+2020-11-15 16:16:28.155 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2020-11-15 16:16:28.720 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-11-15 16:16:29.523 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-15 16:16:29.606 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-11-15 16:16:29.750 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2020-11-15 16:16:29.776 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2020-11-15 16:16:54.618 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-15 16:16:54.619 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-11-15 16:16:54.630 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 11 ms
+2020-11-15 16:17:45.461 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.21.Final
+2020-11-15 16:17:47.680 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2020-11-15 16:17:47.689 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2020-11-15 16:17:47.689 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-15 16:17:47.690 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-15 16:17:47.777 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-15 16:17:47.777 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2101 ms
+2020-11-15 16:17:47.882 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2020-11-15 16:17:48.239 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-11-15 16:17:49.091 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-15 16:17:49.151 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-11-15 16:17:49.280 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2020-11-15 16:17:49.305 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2020-11-15 16:18:15.666 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-15 16:18:15.669 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-11-15 16:18:15.717 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 47 ms
+2020-11-15 16:19:43.218 [http-nio-8888-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 80958
+2020-11-15 16:19:43.220 [http-nio-8888-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 114991
+2020-11-15 16:20:56.488 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.21.Final
+2020-11-15 16:20:58.605 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2020-11-15 16:20:58.614 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2020-11-15 16:20:58.615 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-15 16:20:58.615 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-15 16:20:58.789 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-15 16:20:58.789 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2108 ms
+2020-11-15 16:20:58.923 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2020-11-15 16:20:59.435 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-11-15 16:21:00.098 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-15 16:21:00.181 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-11-15 16:21:00.348 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2020-11-15 16:21:00.387 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2020-11-15 16:21:46.391 [http-nio-8888-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-15 16:21:46.392 [http-nio-8888-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-11-15 16:21:46.412 [http-nio-8888-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 18 ms
+2020-11-15 16:37:50.321 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.21.Final
+2020-11-15 16:37:51.988 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2020-11-15 16:37:51.996 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2020-11-15 16:37:51.997 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-15 16:37:51.997 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-15 16:37:52.075 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-15 16:37:52.075 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1514 ms
+2020-11-15 16:37:52.177 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2020-11-15 16:37:52.510 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-11-15 16:37:53.229 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-15 16:37:53.298 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-11-15 16:37:53.435 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2020-11-15 16:37:53.460 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2020-11-15 16:39:14.274 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.21.Final
+2020-11-15 16:39:15.997 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2020-11-15 16:39:16.007 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2020-11-15 16:39:16.007 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-15 16:39:16.008 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-15 16:39:16.093 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-15 16:39:16.093 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1744 ms
+2020-11-15 16:39:16.204 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2020-11-15 16:39:16.542 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-11-15 16:39:17.118 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-15 16:39:17.176 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-11-15 16:39:17.312 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2020-11-15 16:39:17.343 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2020-11-15 16:39:28.544 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-15 16:39:28.544 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-11-15 16:39:28.557 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 13 ms
+2020-11-15 16:42:32.292 [http-nio-8888-exec-3] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 166502
+2020-11-15 16:42:32.294 [http-nio-8888-exec-3] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 195764
+2020-11-15 16:47:17.769 [http-nio-8888-exec-6] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 279749
+2020-11-15 16:49:21.688 [http-nio-8888-exec-8] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 123597
+2020-11-15 16:51:41.744 [http-nio-8888-exec-6] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 105458
+2020-11-15 16:54:00.751 [http-nio-8888-exec-9] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 75876
+2020-11-15 17:04:18.739 [http-nio-8888-exec-1] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 470661
+2020-11-15 17:05:28.727 [http-nio-8888-exec-6] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 68745
+2020-11-15 17:10:09.645 [http-nio-8888-exec-9] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 279330
+2020-11-15 17:14:32.906 [http-nio-8888-exec-8] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 138696
+2020-11-15 17:16:49.096 [http-nio-8888-exec-7] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 71477
+2020-11-15 19:02:46.839 [http-nio-8888-exec-4] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 6300928
+2020-11-15 19:04:41.828 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.21.Final
+2020-11-15 19:04:44.951 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2020-11-15 19:04:44.975 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2020-11-15 19:04:44.976 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-15 19:04:44.977 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-15 19:04:45.082 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-15 19:04:45.083 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2932 ms
+2020-11-15 19:04:45.266 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2020-11-15 19:04:45.863 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-11-15 19:04:47.172 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-15 19:04:47.321 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-11-15 19:04:47.495 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2020-11-15 19:04:47.529 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2020-11-15 19:04:56.602 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-15 19:04:56.602 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-11-15 19:04:56.615 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 13 ms
+2020-11-15 19:06:45.684 [http-nio-8888-exec-8] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 70328
+2020-11-15 19:06:45.689 [http-nio-8888-exec-8] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 119836
+2020-11-15 19:07:47.132 [http-nio-8888-exec-8] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 61435
+2020-11-15 19:11:44.610 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.21.Final
+2020-11-15 19:11:46.475 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2020-11-15 19:11:46.486 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2020-11-15 19:11:46.487 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-15 19:11:46.488 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-15 19:11:46.622 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-15 19:11:46.622 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1895 ms
+2020-11-15 19:11:46.773 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2020-11-15 19:11:47.216 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-11-15 19:11:47.940 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-15 19:11:48.036 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-11-15 19:11:48.220 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2020-11-15 19:11:48.251 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2020-11-15 19:11:52.013 [http-nio-8888-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-15 19:11:52.013 [http-nio-8888-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-11-15 19:11:52.031 [http-nio-8888-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 17 ms
+2020-11-15 19:13:16.867 [http-nio-8888-exec-3] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 80228
+2020-11-15 19:13:16.868 [http-nio-8888-exec-3] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 89666
+2020-11-15 19:15:54.598 [http-nio-8888-exec-8] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 63222
+2020-11-15 19:18:39.239 [http-nio-8888-exec-1] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 93478
+2020-11-15 19:38:25.574 [http-nio-8888-exec-10] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 1182634
+2020-11-15 19:41:58.608 [http-nio-8888-exec-10] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 213025
+2020-11-15 19:50:06.101 [http-nio-8888-exec-10] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 437456
+2020-11-15 19:52:52.618 [http-nio-8888-exec-10] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 166501
+2020-11-15 19:56:10.151 [http-nio-8888-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 189427
+2020-11-15 20:02:13.963 [http-nio-8888-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 175061
+2020-11-15 20:03:29.265 [http-nio-8888-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 75289
+2020-11-15 20:07:02.084 [http-nio-8888-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 121743
+2020-11-15 20:09:03.886 [http-nio-8888-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 88708
+2020-11-15 20:10:04.762 [http-nio-8888-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 60860
+2020-11-15 20:11:13.548 [http-nio-8888-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 68778
+2020-11-15 20:13:23.945 [http-nio-8888-exec-3] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 71385
+2020-11-15 20:14:28.091 [http-nio-8888-exec-3] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 64104
+2020-11-15 20:16:07.332 [http-nio-8888-exec-3] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 99233
+2020-11-15 20:19:45.478 [http-nio-8888-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 71812
+2020-11-15 20:22:14.860 [http-nio-8888-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 92576
+2020-11-15 20:23:58.711 [http-nio-8888-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 76376
+2020-11-15 20:25:59.451 [http-nio-8888-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 102768
+2020-11-15 20:29:04.828 [http-nio-8888-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 185368
+2020-11-15 20:33:37.950 [http-nio-8888-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 177322
+2020-11-15 20:34:57.304 [http-nio-8888-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 79346
+2020-11-15 20:38:18.607 [http-nio-8888-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 66951
+2020-11-15 20:41:38.125 [http-nio-8888-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 171524
+2020-11-15 20:42:41.374 [http-nio-8888-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 63235
+2020-11-15 20:43:51.511 [http-nio-8888-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 70129
+2020-11-15 20:46:01.916 [http-nio-8888-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 66091
+2020-11-15 20:47:54.169 [http-nio-8888-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 112246
+2020-11-15 20:50:36.265 [http-nio-8888-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 149448
+2020-11-15 20:56:31.823 [http-nio-8888-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 76563
+2020-11-15 20:58:38.167 [http-nio-8888-exec-2] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 109738
+2020-11-15 21:01:13.107 [http-nio-8888-exec-7] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 88614
+2020-11-15 21:02:15.833 [http-nio-8888-exec-7] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 62719
+2020-11-15 21:04:08.717 [http-nio-8888-exec-8] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 80814
+2020-11-15 21:07:41.350 [http-nio-8888-exec-4] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 194383
+2020-11-15 21:15:57.447 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.21.Final
+2020-11-15 21:15:59.914 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2020-11-15 21:15:59.928 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2020-11-15 21:15:59.929 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-15 21:15:59.929 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-15 21:16:00.093 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-15 21:16:00.093 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2486 ms
+2020-11-15 21:16:00.317 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2020-11-15 21:16:01.433 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-11-15 21:16:02.869 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-15 21:16:02.966 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-11-15 21:16:03.252 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2020-11-15 21:16:03.322 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2020-11-15 21:16:23.571 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-15 21:16:23.571 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-11-15 21:16:23.583 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+2020-11-15 21:19:42.075 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.21.Final
+2020-11-15 21:19:45.309 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2020-11-15 21:19:45.327 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2020-11-15 21:19:45.328 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-15 21:19:45.328 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-15 21:19:45.537 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-15 21:19:45.537 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3233 ms
+2020-11-15 21:19:45.860 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2020-11-15 21:19:46.546 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-11-15 21:19:47.634 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-15 21:19:47.728 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-11-15 21:19:47.879 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2020-11-15 21:19:47.924 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2020-11-15 21:21:00.456 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.21.Final
+2020-11-15 21:21:03.347 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2020-11-15 21:21:03.356 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2020-11-15 21:21:03.357 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-15 21:21:03.357 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-15 21:21:03.509 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-15 21:21:03.509 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2793 ms
+2020-11-15 21:21:03.651 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2020-11-15 21:21:04.305 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-11-15 21:21:05.293 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-15 21:21:05.394 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-11-15 21:21:05.535 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2020-11-15 21:21:05.564 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2020-11-15 21:21:10.442 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-15 21:21:10.442 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-11-15 21:21:10.574 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 132 ms
+2020-11-15 21:22:11.608 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.21.Final
+2020-11-15 21:22:13.976 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2020-11-15 21:22:13.991 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2020-11-15 21:22:13.991 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-15 21:22:13.992 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-15 21:22:14.123 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-15 21:22:14.123 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2284 ms
+2020-11-15 21:22:14.237 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2020-11-15 21:22:14.629 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-11-15 21:22:15.218 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-15 21:22:15.320 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-11-15 21:22:15.462 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2020-11-15 21:22:15.500 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2020-11-15 21:22:26.474 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-15 21:22:26.474 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-11-15 21:22:26.486 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+2020-11-15 21:25:45.222 [http-nio-8888-exec-3] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 186640
+2020-11-15 21:25:45.225 [http-nio-8888-exec-3] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 210605
+2020-11-15 21:27:10.564 [http-nio-8888-exec-3] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 85329
+2020-11-15 21:28:14.123 [http-nio-8888-exec-3] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 63547
+2020-11-15 21:32:45.288 [http-nio-8888-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 69964
+2020-11-15 21:35:34.116 [http-nio-8888-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 168815
+2020-11-15 21:36:59.525 [http-nio-8888-exec-10] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 66530
+2020-11-15 21:41:18.578 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.21.Final
+2020-11-15 21:41:24.038 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2020-11-15 21:41:24.071 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2020-11-15 21:41:24.072 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-15 21:41:24.073 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-15 21:41:24.516 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-15 21:41:24.517 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5359 ms
+2020-11-15 21:41:24.884 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2020-11-15 21:41:26.655 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-11-15 21:41:29.520 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-15 21:41:29.846 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-11-15 21:41:30.443 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2020-11-15 21:41:30.519 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2020-11-15 21:42:13.350 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-15 21:42:13.351 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-11-15 21:42:13.363 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+2020-11-15 21:43:46.443 [http-nio-8888-exec-3] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 89184
+2020-11-15 21:43:46.445 [http-nio-8888-exec-3] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 139830
+2020-11-15 21:45:13.283 [http-nio-8888-exec-6] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 66078
+2020-11-15 21:48:39.430 [http-nio-8888-exec-4] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 103560
+2020-11-15 21:51:11.190 [http-nio-8888-exec-1] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 67737
+2020-11-15 21:54:48.393 [http-nio-8888-exec-1] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 142401
+2020-11-15 22:21:23.927 [http-nio-8888-exec-4] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 1442093
+2020-11-15 22:25:51.746 [http-nio-8888-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 156928
+2020-11-15 22:27:05.841 [http-nio-8888-exec-7] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 61457
+2020-11-15 22:30:55.480 [http-nio-8888-exec-10] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 229629
+2020-11-15 22:33:06.776 [http-nio-8888-exec-6] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 88017
+2020-11-15 22:34:26.765 [http-nio-8888-exec-4] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 75800
+2020-11-15 22:37:07.216 [http-nio-8888-exec-9] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 98386
+2020-11-15 22:39:18.352 [http-nio-8888-exec-6] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 64927
+2020-11-15 22:44:57.766 [http-nio-8888-exec-9] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 88988
+2020-11-15 22:50:07.666 [http-nio-8888-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 155488
+2020-11-15 22:52:27.559 [http-nio-8888-exec-1] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 91889
+2020-11-15 22:55:51.011 [http-nio-8888-exec-3] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 124698
+2020-11-15 22:58:27.125 [http-nio-8888-exec-7] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 112944
+2020-11-15 23:01:29.123 [http-nio-8888-exec-9] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 101611
+2020-11-15 23:03:45.563 [http-nio-8888-exec-7] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 62968
+2020-11-15 23:04:59.553 [http-nio-8888-exec-9] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, jdbcUrl : jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai, lastPacketReceivedIdleMillis : 71998

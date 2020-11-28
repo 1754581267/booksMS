@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>电子书管理</title>
+
+    <link href="./plugins/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/current.css" rel="stylesheet">
+    <style>
+        .lh>tbody>tr>td {
+            line-height: 33px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+        #data > td {
+            line-height: 68px;
+        }
+    </style>
+</head>
+<body>
+<div id="staff">
+    <div>
+        <button @click="mod()">
+            模态框
+        </button>
+    </div>
+    <!-- 添加书籍章节信息 -->
+    <div class="modal" id="addCont" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="width: 500px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">编辑{{book}}章节内容</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" id="contform" @submit.prevent="submit1()" method="post" >
+
+                        <div>
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+                                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+                                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+                                <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="home">第一页</div>
+                                <div role="tabpanel" class="tab-pane" id="profile">第二页</div>
+                                <div role="tabpanel" class="tab-pane" id="messages">第三页</div>
+                                <div role="tabpanel" class="tab-pane" id="settings">第四页</div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="modal-footer text-center" style="margin: auto; width: 150px;">
+                            <button type="submit" class="btn btn-primary">保存</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./plugins/jq/jquery.min.js"></script>
+<script src="./plugins/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="./plugins/layer/layer.js"></script>
+<script src="./plugins/vue/vue.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/current.js"></script>
+<script type="text/javascript">
+    var app = new Vue({
+        el : "#staff",
+        date :{
+
+        },
+        methods : {
+            mod: function () {
+                $("#addCont").modal(
+                    {
+                        keyboard:false,
+                        backdrop:"static"
+                    }
+                );
+            },
+            
+
+        }
+    })
+</script>
+</body>
+</html>

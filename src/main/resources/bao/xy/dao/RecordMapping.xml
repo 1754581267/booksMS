@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="bao.xy.dao.RecordMapping">
+
+    <insert id="add" keyProperty="record.id" useGeneratedKeys="true">
+        INSERT INTO records (user_id, book_id, book_cont, date)
+        VALUES (#{record.userId}, #{record.bookId}, #{record.bookCont}, #{record.date})
+    </insert>
+
+    <select id="list" resultMap="recMap">
+        SELECT  t1.id tid, user_id, book_id, name, author, book_cont, t1.date tdate, count(*) cou
+        FROM records t1
+        INNER JOIN book t2
+        ON t2.id = t1.book_id
+        <include refid="whereSql"></include>
+        GROUP BY t1.book_id
+        ORDER BY cou DESC
+    </select>
+
+    <select id="listCount" resultType="java.lang.Integer">
+        SELECT count(*) FROM (
+            SELECT  count(*) FROM records t1
+            INNER JOIN book t2
+            ON t2.id = t1.book_id
+            <include refid="whereSql"></include>
+            GROUP BY t1.book_id
+        ) count
+
+    </select>
+
+
+    <resultMap id="recMap" type="bao.xy.model.Record">
+        <result column="tid" property="id"></result>
+        <result column="user_id" property="userId"></result>
+        <result column="book_id" property="bookId"></result>
+        <result column="name" property="bookName"></result>
+        <result column="book_cont" property="bookCont"></result>
+        <result column="tdate" property="date"></result>
+        <result column="cou" property="count"></result>
+    </resultMap>
+
+
+    <sql id="whereSql">
+        <where>
+            <if test="name != null and name != ''">
+                and name LIKE  CONCAT('%', #{name}, '%')
+            </if>
+            <if test="author != null and author != ''">
+                and author LIKE  CONCAT('%', #{author}, '%')
+            </if>
+            <if test="date != null and date != ''">
+                and DATE_SUB(CURDATE(), INTERVAL #{date} DAY) &lt;= date(t1.date)
+            </if>
+        </where>
+    </sql>
+
+</mapper>

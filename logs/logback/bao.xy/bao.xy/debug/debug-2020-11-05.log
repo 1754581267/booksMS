@@ -1,0 +1,79 @@
+2020-11-05 19:41:02.184 [main] DEBUG bao.xy.BooksMsApplication - Running with Spring Boot v2.2.11.RELEASE, Spring v5.2.10.RELEASE
+2020-11-05 19:41:31.668 [main] DEBUG bao.xy.BooksMsApplication - Running with Spring Boot v2.2.11.RELEASE, Spring v5.2.10.RELEASE
+2020-11-05 19:43:38.479 [main] DEBUG bao.xy.BooksMsApplication - Running with Spring Boot v2.2.11.RELEASE, Spring v5.2.10.RELEASE
+2020-11-05 19:45:18.707 [main] DEBUG bao.xy.BooksMsApplication - Running with Spring Boot v2.2.11.RELEASE, Spring v5.2.10.RELEASE
+2020-11-05 19:47:48.231 [main] DEBUG bao.xy.BooksMsApplication - Running with Spring Boot v2.2.11.RELEASE, Spring v5.2.10.RELEASE
+2020-11-05 19:48:01.159 [http-nio-8888-exec-5] DEBUG bao.xy.dao.LoginMapping.selet - ==>  Preparing: select * from staff where user_name = ?
+2020-11-05 19:48:01.518 [http-nio-8888-exec-5] DEBUG bao.xy.dao.LoginMapping.selet - ==> Parameters: admin(String)
+2020-11-05 19:48:01.566 [http-nio-8888-exec-5] DEBUG bao.xy.dao.LoginMapping.selet - <==      Total: 1
+2020-11-05 19:48:37.972 [main] DEBUG bao.xy.BooksMsApplication - Running with Spring Boot v2.2.11.RELEASE, Spring v5.2.10.RELEASE
+2020-11-05 19:48:49.311 [http-nio-8888-exec-4] DEBUG bao.xy.dao.LoginMapping.selet - ==>  Preparing: select * from staff where user_name = ?
+2020-11-05 19:48:49.704 [http-nio-8888-exec-4] DEBUG bao.xy.dao.LoginMapping.selet - ==> Parameters: admin(String)
+2020-11-05 19:48:49.742 [http-nio-8888-exec-4] DEBUG bao.xy.dao.LoginMapping.selet - <==      Total: 1
+2020-11-05 19:48:57.430 [http-nio-8888-exec-7] DEBUG bao.xy.dao.StaffMapping.listCount - ==>  Preparing: select count (*) from staff
+2020-11-05 19:48:57.435 [http-nio-8888-exec-7] DEBUG bao.xy.dao.StaffMapping.listCount - ==> Parameters: 
+2020-11-05 19:50:42.372 [main] DEBUG bao.xy.BooksMsApplication - Running with Spring Boot v2.2.11.RELEASE, Spring v5.2.10.RELEASE
+2020-11-05 19:50:54.481 [http-nio-8888-exec-6] DEBUG bao.xy.dao.LoginMapping.selet - ==>  Preparing: select * from staff where user_name = ?
+2020-11-05 19:50:54.769 [http-nio-8888-exec-6] DEBUG bao.xy.dao.LoginMapping.selet - ==> Parameters: admin(String)
+2020-11-05 19:50:54.807 [http-nio-8888-exec-6] DEBUG bao.xy.dao.LoginMapping.selet - <==      Total: 1
+2020-11-05 19:51:03.646 [http-nio-8888-exec-6] DEBUG bao.xy.dao.StaffMapping.listCount - ==>  Preparing: select count (*) from staff
+2020-11-05 19:51:03.650 [http-nio-8888-exec-6] DEBUG bao.xy.dao.StaffMapping.listCount - ==> Parameters: 
+2020-11-05 19:51:13.032 [http-nio-8888-exec-6] DEBUG bao.xy.dao.StaffMapping.listCount - ==>  Preparing: select count (*) from staff
+2020-11-05 19:51:13.033 [http-nio-8888-exec-6] DEBUG bao.xy.dao.StaffMapping.listCount - ==> Parameters: 
+2020-11-05 19:54:44.318 [main] DEBUG bao.xy.BooksMsApplication - Running with Spring Boot v2.2.11.RELEASE, Spring v5.2.10.RELEASE
+2020-11-05 19:55:05.157 [main] DEBUG bao.xy.BooksMsApplication - Running with Spring Boot v2.2.11.RELEASE, Spring v5.2.10.RELEASE
+2020-11-05 19:55:15.290 [http-nio-8888-exec-3] DEBUG bao.xy.dao.LoginMapping.selet - ==>  Preparing: select * from staff where user_name = ?
+2020-11-05 19:55:15.721 [http-nio-8888-exec-3] DEBUG bao.xy.dao.LoginMapping.selet - ==> Parameters: admin(String)
+2020-11-05 19:55:15.750 [http-nio-8888-exec-3] DEBUG bao.xy.dao.LoginMapping.selet - <==      Total: 1
+2020-11-05 19:55:18.560 [http-nio-8888-exec-7] DEBUG bao.xy.dao.StaffMapping.listCount - ==>  Preparing: select count (*) from staff
+2020-11-05 19:55:18.571 [http-nio-8888-exec-7] DEBUG bao.xy.dao.StaffMapping.listCount - ==> Parameters: 
+2020-11-05 19:55:49.658 [http-nio-8888-exec-7] DEBUG bao.xy.dao.StaffMapping.listCount - ==>  Preparing: select count (*) from staff
+2020-11-05 19:55:49.658 [http-nio-8888-exec-7] DEBUG bao.xy.dao.StaffMapping.listCount - ==> Parameters: 
+2020-11-05 19:57:32.750 [http-nio-8888-exec-3] DEBUG bao.xy.dao.StaffMapping.listCount - ==>  Preparing: select count (*) from staff
+2020-11-05 19:57:32.751 [http-nio-8888-exec-3] DEBUG bao.xy.dao.StaffMapping.listCount - ==> Parameters: 
+2020-11-05 19:57:37.489 [http-nio-8888-exec-5] DEBUG bao.xy.dao.StaffMapping.listCount - ==>  Preparing: select count (*) from staff
+2020-11-05 19:57:37.490 [http-nio-8888-exec-5] DEBUG bao.xy.dao.StaffMapping.listCount - ==> Parameters: 
+2020-11-05 19:57:47.478 [http-nio-8888-exec-4] DEBUG bao.xy.dao.StaffMapping.listCount - ==>  Preparing: select count (*) from staff
+2020-11-05 19:57:47.479 [http-nio-8888-exec-4] DEBUG bao.xy.dao.StaffMapping.listCount - ==> Parameters: 
+2020-11-05 19:59:48.451 [main] DEBUG bao.xy.BooksMsApplication - Running with Spring Boot v2.2.11.RELEASE, Spring v5.2.10.RELEASE
+2020-11-05 20:00:12.136 [main] DEBUG bao.xy.BooksMsApplication - Running with Spring Boot v2.2.11.RELEASE, Spring v5.2.10.RELEASE
+2020-11-05 20:00:24.456 [http-nio-8888-exec-6] DEBUG bao.xy.dao.StaffMapping.listCount - ==>  Preparing: select count(*) from staff
+2020-11-05 20:00:24.871 [http-nio-8888-exec-6] DEBUG bao.xy.dao.StaffMapping.listCount - ==> Parameters: 
+2020-11-05 20:00:24.920 [http-nio-8888-exec-6] DEBUG bao.xy.dao.StaffMapping.listCount - <==      Total: 1
+2020-11-05 20:00:24.931 [http-nio-8888-exec-6] DEBUG bao.xy.dao.StaffMapping.select - ==>  Preparing: select * from staff
+2020-11-05 20:00:24.932 [http-nio-8888-exec-6] DEBUG bao.xy.dao.StaffMapping.select - ==> Parameters: 
+2020-11-05 20:00:24.936 [http-nio-8888-exec-6] DEBUG bao.xy.dao.StaffMapping.select - <==      Total: 1
+2020-11-05 20:02:05.361 [http-nio-8888-exec-5] DEBUG bao.xy.dao.StaffMapping.listCount - ==>  Preparing: select count(*) from staff
+2020-11-05 20:02:05.362 [http-nio-8888-exec-5] DEBUG bao.xy.dao.StaffMapping.listCount - ==> Parameters: 
+2020-11-05 20:02:05.364 [http-nio-8888-exec-5] DEBUG bao.xy.dao.StaffMapping.listCount - <==      Total: 1
+2020-11-05 20:02:05.365 [http-nio-8888-exec-5] DEBUG bao.xy.dao.StaffMapping.select - ==>  Preparing: select * from staff
+2020-11-05 20:02:05.366 [http-nio-8888-exec-5] DEBUG bao.xy.dao.StaffMapping.select - ==> Parameters: 
+2020-11-05 20:02:05.368 [http-nio-8888-exec-5] DEBUG bao.xy.dao.StaffMapping.select - <==      Total: 1
+2020-11-05 20:06:48.444 [main] DEBUG bao.xy.BooksMsApplication - Running with Spring Boot v2.2.11.RELEASE, Spring v5.2.10.RELEASE
+2020-11-05 20:07:20.370 [http-nio-8888-exec-4] DEBUG bao.xy.dao.StaffMapping.listCount - ==>  Preparing: select count(*) from staff
+2020-11-05 20:07:20.634 [http-nio-8888-exec-4] DEBUG bao.xy.dao.StaffMapping.listCount - ==> Parameters: 
+2020-11-05 20:07:20.667 [http-nio-8888-exec-4] DEBUG bao.xy.dao.StaffMapping.listCount - <==      Total: 1
+2020-11-05 20:07:20.672 [http-nio-8888-exec-4] DEBUG bao.xy.dao.StaffMapping.select - ==>  Preparing: select * from staff
+2020-11-05 20:07:20.673 [http-nio-8888-exec-4] DEBUG bao.xy.dao.StaffMapping.select - ==> Parameters: 
+2020-11-05 20:07:20.676 [http-nio-8888-exec-4] DEBUG bao.xy.dao.StaffMapping.select - <==      Total: 1
+2020-11-05 20:10:11.213 [main] DEBUG bao.xy.BooksMsApplication - Running with Spring Boot v2.2.11.RELEASE, Spring v5.2.10.RELEASE
+2020-11-05 20:10:23.217 [http-nio-8888-exec-5] DEBUG bao.xy.dao.StaffMapping.listCount - ==>  Preparing: select count(*) from staff
+2020-11-05 20:10:23.516 [http-nio-8888-exec-5] DEBUG bao.xy.dao.StaffMapping.listCount - ==> Parameters: 
+2020-11-05 20:10:23.560 [http-nio-8888-exec-5] DEBUG bao.xy.dao.StaffMapping.listCount - <==      Total: 1
+2020-11-05 20:10:23.567 [http-nio-8888-exec-5] DEBUG bao.xy.dao.StaffMapping.select - ==>  Preparing: select * from staff
+2020-11-05 20:10:23.568 [http-nio-8888-exec-5] DEBUG bao.xy.dao.StaffMapping.select - ==> Parameters: 
+2020-11-05 20:10:23.671 [http-nio-8888-exec-5] DEBUG bao.xy.dao.StaffMapping.select - <==      Total: 1
+2020-11-05 20:11:28.956 [main] DEBUG bao.xy.BooksMsApplication - Running with Spring Boot v2.2.11.RELEASE, Spring v5.2.10.RELEASE
+2020-11-05 20:11:38.434 [http-nio-8888-exec-3] DEBUG bao.xy.dao.StaffMapping.listCount - ==>  Preparing: select count(*) from staff
+2020-11-05 20:11:38.751 [http-nio-8888-exec-3] DEBUG bao.xy.dao.StaffMapping.listCount - ==> Parameters: 
+2020-11-05 20:11:38.783 [http-nio-8888-exec-3] DEBUG bao.xy.dao.StaffMapping.listCount - <==      Total: 1
+2020-11-05 20:11:38.788 [http-nio-8888-exec-3] DEBUG bao.xy.dao.StaffMapping.select - ==>  Preparing: select * from staff
+2020-11-05 20:11:38.789 [http-nio-8888-exec-3] DEBUG bao.xy.dao.StaffMapping.select - ==> Parameters: 
+2020-11-05 20:11:38.791 [http-nio-8888-exec-3] DEBUG bao.xy.dao.StaffMapping.select - <==      Total: 1
+2020-11-05 21:00:57.969 [main] DEBUG bao.xy.BooksMsApplication - Running with Spring Boot v2.2.11.RELEASE, Spring v5.2.10.RELEASE
+2020-11-05 21:01:11.524 [http-nio-8888-exec-2] DEBUG bao.xy.dao.StaffMapping.listCount - ==>  Preparing: select count(*) from staff
+2020-11-05 21:01:11.902 [http-nio-8888-exec-2] DEBUG bao.xy.dao.StaffMapping.listCount - ==> Parameters: 
+2020-11-05 21:01:11.931 [http-nio-8888-exec-2] DEBUG bao.xy.dao.StaffMapping.listCount - <==      Total: 1
+2020-11-05 21:01:11.935 [http-nio-8888-exec-2] DEBUG bao.xy.dao.StaffMapping.select - ==>  Preparing: select * from staff
+2020-11-05 21:01:11.936 [http-nio-8888-exec-2] DEBUG bao.xy.dao.StaffMapping.select - ==> Parameters: 
+2020-11-05 21:01:11.940 [http-nio-8888-exec-2] DEBUG bao.xy.dao.StaffMapping.select - <==      Total: 1

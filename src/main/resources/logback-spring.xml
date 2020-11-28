@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<!-- 配置信息 Start -->
+	<!-- APP名称 -->
+	<property name="AppName" value="bao.xy" />
+	<!-- 日志输出级别  ERROR WARN INFO DEBUG -->
+	<property name="logbackLevel" value="INFO" />
+	<!-- 日志保留的个数 -->
+	<property name="logMaxHistory" value="10" />
+	<!-- 日志文件根目录 -->
+	<property name="logHomeDir" value="${user.dir}/logs/logback" />
+	<!-- 日志输出格式 -->
+	<property name="logOutPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n" />
+	<!-- 日志存放路径前缀 -->
+	<property name="logFilePath" value="${logHomeDir}/${AppName}/${AppName}" />
+	<contextName>default</contextName>
+	<!-- 配置信息 Ends -->
+
+	<!-- ========================================================================================================= -->
+
+	<!-- 日志输出过滤设置 Start -->
+
+	<!-- 控制台输出配置 -->
+	<appender name="APP_CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<target>System.out</target>
+		<encoder>
+			<pattern>${logOutPattern}</pattern>
+		</encoder>
+	</appender>
+
+	<!-- DEBUG 输出配置 -->
+	<appender name="APP_DEBUG" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<Prudent>false</Prudent>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>DEBUG</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${logFilePath}/debug/debug-%d{yyyy-MM-dd}.log</FileNamePattern>
+			<MaxHistory>${logMaxHistory}</MaxHistory>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>${logOutPattern}</Pattern>
+		</layout>
+	</appender>
+
+	<!-- WARN 输出配置 -->
+	<appender name="APP_WARN" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<Prudent>false</Prudent>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>WARN</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${logFilePath}/warn/warn-%d{yyyy-MM-dd}.log</FileNamePattern>
+			<MaxHistory>${logMaxHistory}</MaxHistory>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>${logOutPattern}</Pattern>
+		</layout>
+	</appender>
+
+	<!-- INFO 输出配置 -->
+	<appender name="APP_INFO" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<Prudent>false</Prudent>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>INFO</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${logFilePath}/info/info-%d{yyyy-MM-dd}.log</FileNamePattern>
+			<MaxHistory>${logMaxHistory}</MaxHistory>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>${logOutPattern}</Pattern>
+		</layout>
+	</appender>
+
+	<!-- ERROR 输出配置 -->
+	<appender name="APP_ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<Prudent>false</Prudent>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>ERROR</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${logFilePath}/error/error-%d{yyyy-MM-dd}.log</FileNamePattern>
+			<MaxHistory>${logMaxHistory}</MaxHistory>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>${logOutPattern}</Pattern>
+		</layout>
+	</appender>
+
+	<!-- 第三方Jar包 输出配置 -->
+	<appender name="APP_THIRD" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<Prudent>false</Prudent>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${logHomeDir}/${AppName}/third/third-%d{yyyy-MM-dd}.log</FileNamePattern>
+			<MaxHistory>${logMaxHistory}</MaxHistory>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>${logOutPattern}</Pattern>
+		</layout>
+	</appender>
+
+	<!-- 日志输出过滤设置 Ends -->
+
+	<!-- ========================================================================================================= -->
+
+	<!-- 日志输出包配置 Start -->
+	<logger name="${AppName}" addtivity="false" level="${logbackLevel}">
+		<appender-ref ref="APP_CONSOLE" />
+		<appender-ref ref="APP_DEBUG" />
+		<appender-ref ref="APP_WARN" />
+		<appender-ref ref="APP_INFO" />
+		<appender-ref ref="APP_ERROR" />
+	</logger>
+
+	<logger name="test" addtivity="false" level="${logbackLevel}">
+		<appender-ref ref="APP_CONSOLE" />
+	</logger>
+
+	<logger name="org" addtivity="false" level="${logbackLevel}">
+		<appender-ref ref="APP_CONSOLE" />
+		<appender-ref ref="APP_THIRD" />
+	</logger>
+
+	<logger name="com" addtivity="false" level="${logbackLevel}">
+		<appender-ref ref="APP_CONSOLE" />
+		<appender-ref ref="APP_THIRD" />
+	</logger>
+
+	<!-- log4jdbc 专用配置 -->
+	<logger name="jdbc.sqltiming" addtivity="false" level="${logbackLevel}">
+		<appender-ref ref="APP_CONSOLE" />
+	</logger>
+
+	<logger name="jdbc.resultsettable" level="INFO" />
+	<logger name="jdbc.sqlonly" level="OFF" />
+	<logger name="jdbc.audit" level="OFF" />
+	<logger name="jdbc.resultset" level="OFF" />
+	<logger name="jdbc.connection" level="OFF" />
+	<!-- 日志输出包配置 Ends -->
+
+	<!-- ========================================================================================================= -->
+
+	<!-- 根logger<root>此标签必须设置在最后面方可正常读取,否则系统将识别为无输出控制. 只有一个level属性,用来设置打印级别,大小写无关:TRACE, DEBUG, INFO, WARN, ERROR, ALL和 OFF, 不能设置为INHERITED或者同义词NULL. 默认是DEBUG. <root>可以包含零个或多个<appender-ref>元素,标识这个appender将会添加到这个loger. -->
+	<root level="WARN">
+		<!-- <appender-ref ref="APP_CONSOLE"/> -->
+	</root>
+
+</configuration>

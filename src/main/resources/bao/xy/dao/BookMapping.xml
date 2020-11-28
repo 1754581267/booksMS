@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="bao.xy.dao.BookMapping">
+
+    <insert id="add" keyProperty="book.id" useGeneratedKeys="true">
+        INSERT INTO book (genre, name, author, note, img, date )
+        VALUES (#{book.genre}, #{book.name}, #{book.author}, #{book.note}, #{book.img}, #{book.date})
+    </insert>
+
+    <insert id="addc" keyProperty="book.id" useGeneratedKeys="true">
+        INSERT INTO content (book, name, author, note, img, date )
+        VALUES (#{book.genre}, #{book.name}, #{book.author}, #{book.note}, #{book.img}, #{book.date})
+    </insert>
+
+    <select id="content" resultMap="conMap">
+        select * from content where book_id = #{bookId}
+    </select>
+
+    <resultMap id="conMap" type="bao.xy.model.Content">
+        <result column="book_id" property="bookId"></result>
+    </resultMap>
+
+    <update id="updt">
+        update book
+        set genre=#{book.genre}, name=#{book.name}, author=#{book.author}, note=#{book.note}
+        where ( id = #{book.id} )
+    </update>
+
+    <select id="select" resultType="bao.xy.model.Book">
+        select * from book <include refid="selectSql"></include>
+    </select>
+
+    <select id="listCount" resultType="java.lang.Integer">
+        select count(*) from book <include refid="selectSql"></include>
+    </select>
+
+    <sql id="selectSql">
+        <where>
+            <if test="genre != null and genre != ''">
+                and genre LIKE  CONCAT('%', #{genre}, '%')
+            </if>
+            <if test="name != null and name != ''">
+                and name LIKE  CONCAT('%', #{name}, '%')
+            </if>
+            <if test="author != null and author != ''">
+                and author LIKE  CONCAT('%', #{author}, '%')
+            </if>
+        </where>
+    </sql>
+</mapper>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="bao.xy.dao.WechatMapping">
+
+    <insert id="add" keyProperty="user.id" useGeneratedKeys="true">
+        INSERT INTO user (openid, nickName, gender, country, province, city, language)
+        VALUES (#{user.openid}, #{user.nickName}, #{user.gender}, #{user.country}, #{user.province}, #{user.city}, #{user.language})
+    </insert>
+
+    <select id="selUser" resultType="bao.xy.model.User">
+        select * from user where openid = #{openid}
+    </select>
+
+    <!--  获取书籍信息并通过记录表进行排序  -->
+    <select id="selBook" resultMap="recBook">
+        SELECT  t1.id tid, genre, name, author, note, t1.date tdate, img, size, count(*) cou
+        FROM book t1
+        LEFT JOIN records t2
+        ON t1.id = t2.book_id
+        <include refid="selectSql"></include>
+        GROUP BY t1.id
+        ORDER BY cou DESC
+    </select>
+
+    <resultMap id="recBook" type="bao.xy.model.Book">
+        <result column="tid" property="id"></result>
+        <result column="genre" property="genre"></result>
+        <result column="name" property="name"></result>
+        <result column="author" property="author"></result>
+        <result column="tdate" property="date"></result>
+        <result column="img" property="img"></result>
+        <result column="size" property="size"></result>
+    </resultMap>
+
+    <select id="selRBook" resultMap="RBook">
+        SELECT tid, genre, name, author, note, tdate, img, size, user_id, book_cont, date
+        FROM(
+        SELECT t2.id tid, book_id, genre, name, author, note, t1.date tdate, img, size, user_id, book_cont, t2.date date
+        FROM records t1
+        INNER JOIN book t2 on t2.id = t1.book_id
+        WHERE t1.user_id = #{id}
+        ORDER BY t1.date DESC) t
+        GROUP BY t.book_id
+    </select>
+
+    <select id="bContent" resultType="java.lang.String">
+        select ${str} from content
+        where book_id = #{bookId}
+    </select>
+
+    <resultMap id="RBook" type="bao.xy.dto.RecordBook">
+        <result column="tid" property="id"></result>
+        <result column="genre" property="genre"></result>
+        <result column="name" property="name"></result>
+        <result column="author" property="author"></result>
+        <result column="tdate" property="date"></result>
+        <result column="img" property="img"></result>
+        <result column="size" property="size"></result>
+        <result column="user_id" property="record.userId" ></result>
+        <result column="book_cont" property="record.bookCont" ></result>
+    </resultMap>
+
+    <sql id="selectSql">
+        <where>
+            <if test="id != null and id != ''">
+                and t1.id = #{id}
+            </if>
+            <if test="genre != null and genre != ''">
+                and genre LIKE  CONCAT('%', #{genre}, '%')
+            </if>
+            <if test="name != null and name != ''">
+                and name LIKE  CONCAT('%', #{name}, '%')
+            </if>
+            <if test="author != null and author != ''">
+                and author LIKE  CONCAT('%', #{author}, '%')
+            </if>
+            <if test="date != null and date != ''">
+                and DATE_SUB(CURDATE(), INTERVAL #{date} DAY) &lt;= date(t2.date)
+            </if>
+        </where>
+    </sql>
+
+</mapper>
