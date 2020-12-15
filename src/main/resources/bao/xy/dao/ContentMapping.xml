@@ -4,6 +4,17 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="bao.xy.dao.ContentMapping">
 
+    <insert id="add" keyProperty="content.id" useGeneratedKeys="true">
+        INSERT INTO content (book_id, serial, chapter, content, date)
+        VALUES (#{content.bookId}, #{content.serial}, #{content.chapter}, #{content.content}, #{content.date})
+    </insert>
+
+    <update id="updt">
+        update content
+        set serial=#{content.serial}, chapter=#{content.chapter}, content=#{content.content}, date=#{content.date}
+        where ( id = #{content.id} )
+    </update>
+
     <select id="content" resultMap="conMap">
         select * from content where book_id = #{bookId}
         ORDER BY serial

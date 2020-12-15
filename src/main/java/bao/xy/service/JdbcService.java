@@ -1,5 +1,7 @@
 package bao.xy.service;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import java.util.List;
 
 /**
@@ -53,6 +55,15 @@ public interface JdbcService {
      * @return integer
      */
     Integer select(String table, String k1, String v1, String k2, String v2);
+
+    /**
+     * 删除数据库对象
+     * @param table 表名
+     * @param k Key
+     * @param v value
+     * @return Integer
+     */
+    Integer delect(String table, String k, String v);
 
     /**
      * 根据id删除数据

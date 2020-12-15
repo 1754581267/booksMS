@@ -1,5 +1,6 @@
 package bao.xy.dao;
 
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Update;
@@ -25,6 +26,9 @@ public interface JdbcUtilsMapper {
     Integer delIds(@Param("table") String table, @Param("k") String k, @Param("ids") List<Integer> ids);
 
     Integer updtIds(@Param("table") String table, @Param("k") String k, @Param("v") String v, @Param("ids") List<Integer> ids);
+
+    @Delete("DELETE FROM ${table} WHERE ${k} = #{v}")
+    Integer delect(@Param("table") String table, @Param("k") String k, @Param("v") String v);
 
     @Update("update ${table} set ${k} = ${v} + ${number})")
     Integer updtall(@Param("table") String table, @Param("k") String k, @Param("v") String v, @Param("number") String number);

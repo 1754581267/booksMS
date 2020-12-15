@@ -10,10 +10,21 @@ public interface ContentService {
 
     /**
      * 添加章节内容
-     * @param chap 章节
-     * @param id 书籍ID
      * @param content 内容
      * @return String: addSuc addErr
      */
-    String add(String chap, String id, String content);
+    String add(Content content);
+
+    /**
+     * 修改章节
+     * @param content 章节对象
+     * @return String updtSuc updtErr
+     */
+    String updt(Content content);
+    /**
+     * 删除章节
+     * @param id
+     * @return
+     */
+    String delChap(String id, String bookId);
 }

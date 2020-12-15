@@ -127,7 +127,7 @@ public class WechatServiceImpl implements WechatService {
         if (sdJson != null) {
             id = sdJson.getString("id");
         }
-        List<Content> content = contentMapping.content(id);
+        List<Content> content = contentMapping.content(null, id);
         return content;
     }
 

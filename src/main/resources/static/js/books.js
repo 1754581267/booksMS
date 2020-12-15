@@ -6,7 +6,6 @@ var app = new Vue({
         name :'',
         work :'',
 		
-
         // 添加业务
         a1 : 0,
         a2 : 0,
@@ -20,10 +19,21 @@ var app = new Vue({
         author : '',
         note : '',
 		
+		// 章节
 		allChapter : [],
-		book : '',
-		cid : '',
+		chapData: {
+			dataCount :0,
+			pageCount :1,
+			pageIndex :1,
+			pageSize :10,
+			pageList : []
+		},
+		bookId : '',
 		content : [],
+		
+		book : '',
+		allId : '',
+		cid : '',
 		chap : '',
 		title : '',
 		cont : '',
@@ -35,20 +45,58 @@ var app = new Vue({
 		sub1: ''
     },
     methods: {
-		getCont : function(li) {
-			this.chap = '';
+		runPage : function(max) {
+			this.chapData.pageList = [];
+			for (var i = 1; i <= max; i++) {
+				this.chapData.pageList.push(i);
+			}
+		},
+		// 下一页操作
+		nextPage: function () {
+			if (this.chapData.pageIndex < this.chapData.pageCount) {
+				this.chapData.pageIndex = this.chapData.pageIndex + 1;
+				this.getCont(this.chapData.pageIndex);
+			}
+		},
+		// 上一页操作
+		upPage: function () {
+			if (this.chapData.pageIndex > 1) {
+				this.chapData.pageIndex = this.chapData.pageIndex - 1;
+				this.getCont(this.chapData.pageIndex);
+			}
+		},
+		chapAdd : function() {
+			this.id = '';
+			this.chap = this.chapData.dataCount + 1;
 			this.title = '';
 			this.cont = '';
-			this.book = li.name;
+		},
+		getCont : function(index, li) {
+			this.id = '';
+			this.title = '';
+			this.cont = '';
+			if (li != null) {
+				this.book = li.name;
+				this.bookId = li.id; 
+			}	
 			$.ajax({
 			    url : "/content.ajax",
 			    type : "POST",
 			    data : {
-			        bookId : li.id,
+					str : 'paging',
+			        id : this.bookId,
+					pageSize : this.chapData.pageSize,
+					pageIndex : index
 			    },
 			    dataType : "JSON",
 			    success : function (code) {
 					app.content = code.list.dataList;
+					app.chapData.dataCount = code.list.dataCount;
+					app.chapData.pageIndex = code.list.pageIndex;
+					app.chapData.pageCount = code.list.pageCount;
+					app.chapData.pageSize = code.list.pageSize;
+					app.runPage(app.chapData.pageCount);
+					app.chap = code.list.dataCount + 1;
 					$("#addCont").modal({
 						keyboard:false,
 						backdrop:"static"
@@ -59,18 +107,49 @@ var app = new Vue({
 			    }
 			});
 		},
-		chapter : function(li) {
-			if (this.chap != null) {
-				this.title = this.chap.chapter;
-				this.cont = this.chap.content;
-				this.cid = li.id;
+		chap_del : function(id) {
+			if (xPage.work == 1) {
+				layer.confirm('是否要删除？', {
+					btn: ['确定','取消'] //按钮
+				}, function(){
+					console.log(this.bookId);
+					$.ajax({
+						url : '/content.ajax',
+						type : "POST",
+						data : {
+							str: 'del',
+							id : id,
+							bookId : app.bookId
+						},
+						dataType : "JSON",
+						success : function (code) {
+							console.log(code.code);
+							if (code.code == "delSuc") {
+								layer.alert("删除成功");
+								app.getCont(app.chapData.pageIndex);
+							} else if (code.code == "delErr") {
+								layer.alert("删除失败");
+							}
+						},
+						error : function () {
+							layer.alert("删除失败，请联系管理员");
+						}
+					});
+				}, function(){
+					layer.msg('已取消删除', {icon: 1});
+				});
 			} else {
-				this.title = '';
-				this.cont = '';
-				this.cid = '';
+				layer.alert("无法操作");
 			}
 		},
-		submit1 : function() {
+		chap_updt : function(li) {
+			this.cid = li.id;
+			this.bookId = li.bookId;
+			this.chap = li.serial;
+			this.title = li.chapter;
+			this.cont = li.content;
+		},
+		chapAddForm : function(str) {
 			if (this.chap == '') {
 			    $("#inputChap").html("<strong style=\"color: red\">请选择章节</strong>");
 			    this.c1 = 0;
@@ -95,31 +174,38 @@ var app = new Vue({
 			if (this.c1 + this.c2 + this.c3 != 3) {
 				layer.alert("请将信息填写正确");
 			} else {
-				$("#addCont").modal('hide');
-				var str = this.title + '&' + this.cont;
 				$.ajax({
-				    url : "/content.add.ajax",
+				    url : "/content.ajax",
 				    type : "POST",
 				    data : {
-				        chap : this.chap,
+						str : str,
 				        id : this.cid,
-				        content : str
+						bookId : this.bookId,
+				        serial : this.chap,
+						chapter : this.title,
+				        content : this.cont
 				    },
 				    dataType : "JSON",
 				    success : function (code) {
 				        if(code.code == "addSuc") {
-				            layer.alert("章节编辑成功！");
-				            xPage.getData(xPage.pageIndex);
+				            layer.alert("添加章节成功！");
+							app.getCont(app.chapData.pageIndex);
 				        }
 				        if (code.code == "addErr") {
-				            layer.alert("章节编辑失败！")
-			        	        }
+				            layer.alert("添加章节失败！")
+			        	}
+						if(code.code == "updtSuc") {
+						    layer.alert("修改章节成功！");
+							app.getCont(app.chapData.pageIndex);
+						}
+						if (code.code == "updtErr") {
+						    layer.alert("修改章节失败！")
+						}
 				    },
 				    error : function () {
-				        layer.alert("章节编辑失败，请联系管理员");
+				        layer.alert("编辑章节失败，请联系管理员");
 				    }
 				});
-				
 			}
 		},
         addMod: function () {

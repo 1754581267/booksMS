@@ -190,23 +190,35 @@ public class BooksController {
     ContentService contentService;
 
     @RequestMapping("/content.ajax")
-    public String content(String bookId, PageData pd) {
+    public String content(String str, Content content, PageData pd) {
         JSONObject json = new JSONObject();
+        if ("paging".equals(str)) {
+            TableData<Content> td = contentService.content(content.getId(), pd);
+            json.put("list", td);
+        }
 
-        TableData<Content> td = contentService.content(bookId, pd);
-        json.put("list", td);
+        if ("add".equals(str)) {
+            content.setDate(StringUtils.strDate());
+            String add = contentService.add(content);
+            json.put("code", add);
+        }
+
+        if ("updt".equals(str)) {
+            String code = contentService.updt(content);
+            json.put("code", code);
+        }
+
+        // 调用的删除业务
+        if ("del".equals(str)) {
+            System.out.println(content.getBookId());
+            String code = contentService.delChap(content.getId(), content.getBookId());
+            json.put("code", code);
+        }
+
         return json.toJSONString();
 
     }
 
-    @RequestMapping("/content.add.ajax")
-    public String contentAdd(String chap, String id, String content) {
-        JSONObject json = new JSONObject();
-        String add = contentService.add(chap, id, content);
-
-        json.put("code", add);
-        return json.toJSONString();
-    }
 
     /**
      * 显示图片

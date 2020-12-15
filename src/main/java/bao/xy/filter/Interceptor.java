@@ -14,7 +14,15 @@ public class Interceptor implements HandlerInterceptor {
         Staff user = (Staff) request.getSession().getAttribute("user");
 //        System.out.println(uri + "-" + user);
         if (user != null) {
+            if (uri.equals("/staff.html")) {
+                if ("管理员".equals(user.getWork())) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
             return true;
+
         } else {
             System.out.println(uri + "*************");
             response.sendRedirect("index.html");

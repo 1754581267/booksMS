@@ -86,6 +86,19 @@ public class JdbcServiceImpl implements JdbcService {
     }
 
     /**
+     * 删除数据库对象
+     * @param table 表名
+     * @param k Key
+     * @param v value
+     * @return Integer
+     */
+    @Override
+    @Transactional( rollbackFor = Exception.class)
+    public Integer delect(String table, String k, String v) {
+        return mapper.delect(table, k, v);
+    }
+
+    /**
      * 根据id删除数据
      * @param table 表名
      * @param idList List<Integer> ids 值

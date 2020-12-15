@@ -95,7 +95,7 @@
                 <td style="width: 7%;min-width: 73px;">{{li.date}}</td>
                 <td style="width: 16%;">
                     <div class="btn-group  btn-group-xs" role="group">
-						<button type="button" class="btn btn-primary btn-lg btn-default" @click="getCont(li)">
+						<button type="button" class="btn btn-primary btn-lg btn-default" @click="getCont(1, li)">
 						    编辑章节
 						</button>
                         <button type="button" class="btn btn-primary btn-lg btn-danger" @click="xPage.del(li.id)">
@@ -136,43 +136,137 @@
     </div>
 	<!-- 添加书籍章节信息 -->
 	<div class="modal" id="addCont" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-		<div class="modal-dialog" style="width: 500px;">
-			<div class="modal-content">
+		<div class="modal-dialog">
+			<div class="modal-content" style="height: 540px">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 					<h4 class="modal-title">{{book}}</h4>
 				</div>
 				<div class="modal-body">
-					<form class="form-horizontal" id="contform" @submit.prevent="submit1()" method="post" >
-						<div class="form-group">
-							<label for="chapter" class="col-sm-3 control-label">章节:</label>
-							<div class="col-sm-8">
-								<select class="form-control" v-model="chap" id="chapter" @change="chapter()">
-									<option value="" >未选择</option>
-									<option :value="li" v-for="li in content">第 {{li.serial}} 章</option>
-								</select>
-								<div id="inputChap"></div>
+					<div>
+						<ul class="nav nav-tabs" role="tablist">
+							<li role="presentation" class="active"><a href="#allChap" aria-controls="allChap" role="tab" data-toggle="tab">章节表</a></li>
+							<li role="presentation"><a href="#addChap" @click="chapAdd" aria-controls="addChap" role="tab" data-toggle="tab">新增</a></li>
+						</ul>
+						<div class="tab-content">
+							<!-- 章节表 -->
+							<div role="tabpanel" class="tab-pane active" id="allChap">
+								<table class="table table-hover table-bordered lh" >
+								    <tr>
+								        <th>章节</th>
+								        <th>操作</th>
+								    </tr>
+								    <tr v-for="(li, index) in content">
+								        <td>第{{li.serial}}章 {{li.chapter}}</td>
+								        <td>
+								            <div class="btn-group  btn-group-xs" role="group">
+												<button type="button" class="btn btn-primary btn-lg btn-danger" @click="chap_del(li.id)">
+												    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+												    删除
+												</button>
+												<button @click="chap_updt(li)" type="button"  class="btn btn-primary btn-lg btn-warning"  href="#changeChap" aria-controls="changeChap" role="tab" data-toggle="tab">
+												    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+												    修改
+												</button>
+								            </div>
+								        </td>
+								    </tr>
+								</table>
+								<div class="myNav navbar-fixed-bottom" style="margin: 2px 0">
+								    <nav aria-label="Page navigation" class="text-center">
+								        <ul class="pagination">
+								            <li :class="{disabled: (chapData.pageIndex == 1)}" >
+								                <a @click="upPage()" aria-label="Previous">
+								                    <span aria-hidden="true">&laquo;</span>
+								                </a>
+								            </li>
+								            <li v-for="page in chapData.pageList" :class="{disabled: (chapData.pageIndex == page)}" >
+								                <a @click="getCont(page)" >{{page}}</a>
+								            </li>
+								            <li :class="{disabled: (chapData.pageIndex == chapData.pageCount)}" >
+								                <a @click="nextPage()" aria-label="Next">
+								                    <span aria-hidden="true">&raquo;</span>
+								                </a>
+								            </li>
+								            <li class="pager-label" style="line-height: 34px">
+								                &nbsp;第 <input type="number" min="1" :max="chapData.pageCount" v-model="chapData.pageIndex" style="width: 43px; height: 25px;" @change="getCont(chapData.pageIndex)">
+												/ {{chapData.pageCount}} 页
+								                每页 
+												<input 
+												type="number" 
+												min="1" max="10" 
+												v-model="chapData.pageSize" 
+												style="width: 43px; height: 25px;" 
+												@change="getCont(chapData.pageIndex, null)"
+												> 
+												条数据 共{{chapData.dataCount}}项
+								            </li>
+								        </ul>
+								    </nav>
+								</div>
+							</div>
+							<!-- 新增章节 -->
+							<div role="tabpanel" class="tab-pane" id="addChap">
+								<form style="margin-top: 15px;" class="form-horizontal" id="contform" @submit.prevent="chapAddForm('add')" method="post" >
+									<div class="form-group">
+										<label for="chapter" class="col-sm-2 control-label">章节:</label>
+										<div class="col-sm-8">
+											第 <input type="number" style="width: 80px; display: inline;" id="chapter" class="form-control" min="1" v-model="chap"> 章
+											<div id="inputChap"></div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="title" class="col-sm-2 control-label">标题:</label>
+										<div class="col-sm-8">
+											<input type="text" class="form-control" v-model="title" id="title" placeholder="请输入章节标题">
+											<div id="inputTitle"></div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="cont" class="col-sm-2 control-label">内容:</label>
+										<div class="col-sm-8">
+											<textarea class="form-control" rows="10" placeholder="请输入文章内容" v-model="cont" id="cont"></textarea>
+											<div id="inputCont"></div>
+										</div>
+									</div>
+									<div class="modal-footer text-center" style="margin: auto; width: 150px;">
+										<button type="submit" class="btn btn-primary">提交</button>
+										<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+									</div>
+								</form>
+							</div>
+							<!-- 修改章节 -->
+							<div role="tabpanel" class="tab-pane" id="changeChap">
+								<form style="margin-top: 15px;" class="form-horizontal" id="contform" @submit.prevent="chapAddForm('updt')" method="post" >
+									<div class="form-group">
+										<label for="chapter1" class="col-sm-2 control-label">章节:</label>
+										<div class="col-sm-8">
+											第 <input type="number" style="width: 80px; display: inline;" id="chapter1" class="form-control" min="1" v-model="chap"> 章
+											<div id="inputChap"></div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="title1" class="col-sm-2 control-label">标题:</label>
+										<div class="col-sm-8">
+											<input type="text" class="form-control" v-model="title" id="title1" placeholder="请输入章节标题">
+											<div id="inputTitle"></div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="cont1" class="col-sm-2 control-label">内容:</label>
+										<div class="col-sm-8">
+											<textarea class="form-control" rows="10" placeholder="请输入文章内容" v-model="cont" id="cont1"></textarea>
+											<div id="inputCont"></div>
+										</div>
+									</div>
+									<div class="modal-footer text-center" style="margin: auto; width: 150px;">
+										<button type="submit" class="btn btn-primary">提交</button>
+										<button type="button"  class="btn btn-primary btn-warning" @click="chap_updt(li)" href="#allChap" aria-controls="allChap" role="tab" data-toggle="tab">返回</button>
+									</div>
+								</form>
 							</div>
 						</div>
-						<div class="form-group">
-							<label for="title" class="col-sm-3 control-label">标题:</label>
-							<div class="col-sm-8">
-								<input type="text" class="form-control" v-model="title" id="title" placeholder="请输入章节标题">
-								<div id="inputTitle"></div>
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="cont" class="col-sm-3 control-label">内容:</label>
-							<div class="col-sm-8">
-								<textarea class="form-control" rows="10" placeholder="请输入文章内容" v-model="cont" id="cont"></textarea>
-								<div id="inputCont"></div>
-							</div>
-						</div>
-						<div class="modal-footer text-center" style="margin: auto; width: 150px;">
-							<button type="submit" class="btn btn-primary">保存</button>
-							<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-						</div>
-					</form>
+					</div>
 				</div>
 			</div>
 		</div>

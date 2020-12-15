@@ -27,7 +27,6 @@
             <include refid="whereSql"></include>
             GROUP BY t1.book_id
         ) count
-
     </select>
 
 
